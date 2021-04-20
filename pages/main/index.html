@@ -1,50 +1,51 @@
 <!DOCTYPE html>
 <html lang="en">
+
 <head>
     <meta charset="UTF-8">
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Online Zoo</title>
+    <title>Map</title>
     <link rel="stylesheet" href="style.css">
+    <link rel="stylesheet" href="../../assets/others/others.css">
 </head>
+
 <body>
-    <section class="header-hero">
-        <header class="header">
-            <a class="logo" href="">
-                <p class="logo-title">online</p>
-                <div class="logo-container">
-                    <p class="logo-title">Z</p>
-                    <img src="../../assets/icons/logo.svg" class="logo-icon">
-                </div>
+    <header class="header">
+        <a class="logo" href="">
+            <p class="logo-title">online</p>
+            <div class="logo-container">
+                <p class="logo-title">Z</p>
+                <img src="../../assets/icons/logo.svg" class="logo-icon">
+            </div>
+        </a>
+        <nav class="nav">
+            <a href="" class="nav-link">About</a>
+            <a href="" class="nav-link">Map</a>
+            <a href="" class="nav-link">Zoos</a>
+            <a href="" class="nav-link">Contact us</a>
+            <a href="https://www.figma.com/file/vzrwoqf0kSG1uOify8BRBR/online-zoo?node-id=0%3A1" class="nav-link">Design</a>
+        </nav>
+        <div class="header-container">
+            <input type="text" class="header-container__input">
+            <button class="header-container__search"></button>
+            <button class="header-container__login">log in</button>
+            <button class="header-container__signup">sign up</button>
+        </div>
+    </header>
+    <section class="hero">
+        <div class="hero-container">
+            <h1 class="hero__title">Watch your favorite <span class="hero__title-span">animals online</span></h1>
+            <p class="hero__text">Observe different animals from around the world online in live time. Help vulunteers to take a good care of animals, donate to your favorite ones.</p>
+            <a href="" class="hero__link">Watch now</a>
+        </div>
+        <div class="hero-image">
+            <img src="../../assets/images/Panda.png" alt="Panda">
+            <a class="hero-image__link" href="">
+                <img src="../../assets/icons/Frame.svg" alt="watch">
             </a>
-            <nav class="nav">
-                <a href="" class="nav-link">About</a>
-                <a href="" class="nav-link">Map</a>
-                <a href="" class="nav-link">Zoos</a>
-                <a href="" class="nav-link">Contact us</a>
-                <a href="https://www.figma.com/file/vzrwoqf0kSG1uOify8BRBR/online-zoo?node-id=0%3A1" class="nav-link">Design</a>
-            </nav>
-            <div class="header-container">
-                <input type="text" class="header-container__input">
-                <button class="header-container__search"></button>
-                <button class="header-container__login">log in</button>
-                <button class="header-container__signup">sign up</button>
-            </div>
-        </header>
-        <section class="hero">
-            <div class="hero-container">
-                <h1 class="hero__title">Watch your favorite <span class="hero__title-span">animals online</span></h1>
-                <p class="hero__text">Observe different animals from around the world online in live time. Help vulunteers to take a good care of animals, donate to your favorite ones.</p>
-                <a href="" class="hero__link">Watch now</a>
-            </div>
-            <div class="hero-image">
-                <img src="../../assets/images/Panda.png" alt="Panda">
-                <a class="hero-image__link" href="">
-                    <img src="../../assets/icons/Frame.svg" alt="watch">
-                </a>
-            </div>
-            <h2 class="how">How it works</h2>
-        </section>
+        </div>
+        <h2 class="how">How it works</h2>
     </section>
     <section class="about">
         <div class="about-container">
@@ -66,14 +67,16 @@
             <p class="about-container__text">Support animals with the donations</p>
         </div>
     </section>
-    <img src="../../assets/images/Illustrations-1.png" class="bg-image" alt="bg-image">
+    <section>
+        <img src="../../assets/images/Illustrations-1.png" class="bg-image" alt="bg-image">
+    </section>
     <section class="pets">
         <h2 class="pets-title">Pets in zoo</h2>
         <button class="pets-button">Choose your Favorite</button>
         <div class="pets-container">
             <div class="pets-container__card">
                 <div class="pets-container__card-top">
-                    <a class="pets-container__card-link" href=""><img src="../../assets/images/pandas.png" alt="pandas"></a>                    
+                    <a class="pets-container__card-link" href=""><img src="../../assets/images/Pandas.png" alt="pandas"></a>
                 </div>
                 <div class="pets-container__card-bottom">
                     <h2 class="pets-container__card-title">Pandas</h2>
@@ -153,10 +156,7 @@
     </section>
     <section class="testimonials">
         <h2 class="testimonials-title">Testimonials</h2>
-        <button class="testimonials-button">
-            <img src="../../assets/icons/message.svg" alt="" class="testimonials-button__icon">
-            Leave feedback
-        </button>
+        <button class="testimonials-button">Leave feedback</button>
         <div class="testimonials-container">
             <div class="testimonials-tcard">
                 <h3 class="testimonials-tcard__date">5 November 2020</h3>
@@ -189,14 +189,14 @@
         </div>
     </section>
     <section class="animals">
-        <h2 class="animals-title">Look at this beautiful animals</h2>
-            <a href="" class="animals-links"><img src="../../assets/images/Pandas.png" class="animals-img" alt=""></a>
-            <a href="" class="animals-links"><img src="../../assets/images/gorrilas.png" class="animals-img" alt=""></a>
-            <a href="" class="animals-links"><img src="../../assets/images/eagles.png" class="animals-img" alt=""></a>
-            <a href="" class="animals-links"><img src="../../assets/images/aligators.png" class="animals-img" alt=""></a>
-            <a href="" class="animals-links"><img src="../../assets/images/elephants.png" class="animals-img" alt=""></a>
-            <a href="" class="animals-links"><img src="../../assets/images/lemurs.png" class="animals-img" alt=""></a>
-            <a href="" class="animals-links"><img src="../../assets/images/Pandas.png" class="animals-img" alt=""></a>
+        <h2 class="animals-title">Look at these beautiful animals</h2>
+        <a href="" class="animals-links"><img src="../../assets/images/Pandas.png" class="animals-img" alt=""></a>
+        <a href="" class="animals-links"><img src="../../assets/images/gorrilas.png" class="animals-img" alt=""></a>
+        <a href="" class="animals-links"><img src="../../assets/images/eagles.png" class="animals-img" alt=""></a>
+        <a href="" class="animals-links"><img src="../../assets/images/aligators.png" class="animals-img" alt=""></a>
+        <a href="" class="animals-links"><img src="../../assets/images/elephants.png" class="animals-img" alt=""></a>
+        <a href="" class="animals-links"><img src="../../assets/images/lemurs.png" class="animals-img" alt=""></a>
+        <a href="" class="animals-links"><img src="../../assets/images/Pandas.png" class="animals-img" alt=""></a>
     </section>
     <footer class="footer">
         <a class="logo" href="">
@@ -218,6 +218,8 @@
             <p class="footer-author footer-author-2"> ©RSSchool and ©Yem Digital 2021</p>
         </div>
     </footer>
+    <script src="../main/script.js"></script>
     <script src="script.js"></script>
 </body>
+
 </html>
