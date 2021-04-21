@@ -633,7 +633,7 @@ let zoosPage_alligators = `
 </section>
 `;
 
-document.querySelector(".aside-link");
+let asideLink_1 = document.querySelector(".aside-link");
 
 const locationResolver = (location) => {
     switch (location) {
@@ -645,6 +645,7 @@ const locationResolver = (location) => {
             break;
         case "/zoos/pandas/":
             main.innerHTML = zoosPage_pandas;
+            document.querySelector(".aside-link").style.backgroundColor = "#0d444d"
             break;
         case "/zoos/eagles/":
             main.innerHTML = zoosPage_eagles;
