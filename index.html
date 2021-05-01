@@ -1,34 +1,31 @@
 <!DOCTYPE html>
 <html lang="en">
-<head>
-    <meta charset="UTF-8">
-    <meta http-equiv="X-UA-Compatible" content="IE=edge">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Online Zoo</title>
-    <link rel="stylesheet" href="./pages/main/style.css">
-    <link rel="stylesheet" href="./pages/map/style.css">
-    <link rel="stylesheet" href="./pages/zoos-pandas/style.css">
-    <link rel="stylesheet" href="./pages/error-404/style.css">
-    <link rel="stylesheet" href="./pages/main/media/media.css">
-    <link rel="stylesheet" href="./pages/map/media/media.css">
-    <link rel="stylesheet" href="./pages/zoos/media/media.css">
-    <link rel="stylesheet" href="./pages/error-404/media/media.css">
-    <link rel="stylesheet" href="./assets/others/others.css">
-</head>
-<body onload="locationResolver('/about/')">
-    <header class="header">
-        <a class="logo" href="#/about" onclick="locationResolver('/about/')">
-            <p class="logo-title">online</p>
-            <div class="logo-container">
+    <head>
+        <meta charset="UTF-8">
+        <meta http-equiv="X-UA-Compatible" content="IE=edge">
+        <meta name="viewport" content="width=device-width, initial-scale=1.0">
+        <title>Online Zoo</title>
+        <link rel="stylesheet" href="./pages/main/style.css">
+        <link rel="stylesheet" href="./pages/map/style.css">
+        <link rel="stylesheet" href="./pages/zoos-pandas/style.css">
+        <link rel="stylesheet" href="./pages/main/media/media.css">
+        <link rel="stylesheet" href="./pages/map/media/media.css">
+        <link rel="stylesheet" href="./assets/others/others.css">
+    </head>
+    <body id="body">
+        <header class="header">
+            <a class="logo" href="#/about" id="aboutLogo">
+                <p class="logo-title">online</p>
+                <div class="logo-container">
                 <p class="logo-title">Z</p>
                 <img src="./assets/icons/logo.svg" class="logo-icon">
             </div>
         </a>
         <nav class="nav">
-            <a href="#/about" onclick="locationResolver('/about/')" class="nav-link">About</a>
-            <a href="#/map" onclick="locationResolver('/map/')" class="nav-link">Map</a>
-            <a href="#/zoos/pandas" onclick="locationResolver('/zoos/pandas/')" class="nav-link">Zoos</a>
-            <button class="nav-link">Contact us</button>
+            <a href="./pages/main/index.html" class="nav-link">About</a>
+            <a href="./pages/map/index.html" class="nav-link">Map</a>
+            <a href="./pages/zoos-pandas/index.html" class="nav-link">Zoos</a>
+            <button class="nav-link" id="nav-button">Contact us</button>
             <a href="https://www.figma.com/file/vzrwoqf0kSG1uOify8BRBR/online-zoo?node-id=0%3A1" class="nav-link">Design</a>
         </nav>
         <div class="header-container">
@@ -38,8 +35,7 @@
             <button class="header-container__signup">sign up</button>
         </div>
     </header>
-    <main class="main">
-
+    <main class="main">   
     </main>
     <footer class="footer">
         <a class="logo" href="">
@@ -50,10 +46,10 @@
             </div>
         </a>
         <nav class="nav">
-            <a href="#/" onclick="locationResolver('/')" class="nav-link">About</a>
-            <a href="#/map" onclick="locationResolver('/map/')" class="nav-link">Map</a>
-            <a href="#/zoos/pandas" onclick="locationResolver('/zoos/pandas/')" class="nav-link">Zoos</a>
-            <button class="nav-link">Contact us</button>
+            <a href="#/about" id="about2" class="nav-link">About</a>
+            <a href="#/map" id="map2" class="nav-link">Map</a>
+            <a href="#/zoos/pandas" id="zoos2" class="nav-link">Zoos</a>
+            <button class="nav-link" id="nav-button">Contact us</button>
             <a href="https://www.figma.com/file/vzrwoqf0kSG1uOify8BRBR/online-zoo?node-id=0%3A1" class="nav-link">Design</a>
         </nav>
         <div class="footer-container">
@@ -61,7 +57,117 @@
             <p class="footer-author footer-author-2"> ©RSSchool and ©Yem Digital 2021</p>
         </div>
     </footer>
-    <script src="./pages/main/script.js"></script>
-    <script src="index.js"></script>
+    
+    <!--Contact-us || pop-up-->
+    <section id="contact">
+        <button id="contact-close" class="btn-close">
+            <img src="./assets/icons/closee.png" alt="">
+        </button>
+        <h2 id="contact-title">contact us</h2>
+        <form id="contact-form" action="">
+            <div id="contact-card">
+                <h3 id="contact-card__subtitle">Name</h3>
+                <p class="text-error" id="contact-card__text-1">Write your name here!</p>
+                <input type="text" id="contact-card__input" class=" contact-card__input-1">
+            </div>
+            <div id="contact-card">
+                <h3 id="contact-card__subtitle">Email</h3>
+                <p class="text-error" id="contact-card__text-2">Write your email here!</p>
+                <input type="text" id="contact-card__input" class="contact-card__input-2">
+            </div>
+            <div id="contact-card">
+                <h3 id="contact-card__subtitle">Your Message</h3>
+                <p class="text-error" id="contact-card__text-3">Write something message here!</p>
+                <input type="text" id="contact-card__input-big">
+            </div>
+        </form>
+        <button id="contact-btn" class="send-btn">send</button>
+    </section>
+
+    <!--Feedback || pop-up-->
+    <section id="feedback">
+        <button id="feedback-close" class="btn-close">
+            <img src="./assets/icons/closee.png" alt="">
+        </button>
+        <h2 id="feedback-title">Leave feedback</h2>
+        <form id="feedback-form" action="">
+            <div id="feedback-card">
+                <h3 id="feedback-card__subtitle">Name</h3>
+                <p class="text-error" id="feedback-card__text-1">Write your name here!</p>
+                <input type="text" id="feedback-card__input" class=" feedback-card__input-1">
+            </div>
+            <div id="feedback-card">
+                <h3 id="feedback-card__subtitle">Email</h3>
+                <p class="text-error" id="feedback-card__text-2">Write your email here!</p>
+                <input type="text" id="feedback-card__input" class="feedback-card__input-2">
+            </div>
+            <div id="feedback-card">
+                <h3 id="feedback-card__subtitle">feedback</h3>
+                <p class="text-error" id="feedback-card__text-3">Write your feedback here!</p>
+                <input type="text" id="feedback-card__input-big">
+            </div>
+        </form>
+        <button id="feedback-btn" class="send-btn">send</button>
+    </section>
+    
+    <!--Donation || pop-up-->
+    <section id="donate">
+        <button id="donate-close" class="btn-close">
+            <img src="./assets/icons/closee.png" alt="">
+        </button>
+        <h2 id="donate-title">Donate to volunteers</h2>
+        <p id="donate-text">Support your favourite animals. It is as simple as buying a cup of coffee.</p>
+        <div id="donate-container">
+            <div id="donate-card">
+                <h2 id="donate-card__subtitle">Choose an animal</h2>
+                <p class="text-error" id="donate-card__text-1">Choose your animals! (Pandas, eagles, gorillas, alligators)</p>
+                <input type="text" class="donate-card__input-1" id="donate-card__input">
+            </div>
+            <div id="donate-payments">
+                <h2 id="donate-card__subtitle">payments</h2>
+                <div id="donate-payments__card">
+                    <button id="donate-payments__card-btn">Monthly</button>
+                    <button id="donate-payments__card-btn">One-time</button>
+                </div>
+                <button id="donate-payments__btn">3$</button>
+                <button id="donate-payments__btn">5$</button>
+                <button id="donate-payments__btn">10$</button>
+                <button id="donate-payments__btn">$25</button>
+            </div>
+        </div>
+        <div id="donate-card">
+            <h2 id="donate-card__subtitle">Your name</h2>
+            <p class="text-error" id="donate-card__text-2">Write your name!</p>
+            <input type="text" class="donate-card__input-2" id="donate-card__input">
+        </div>
+        <div id="donate-card">
+            <h2 id="donate-card__subtitle">Your email</h2>
+            <p class="text-error" id="donate-card__text-3">Write your email!</p>
+            <input type="text" class="donate-card__input-3" id="donate-card__input">
+        </div>
+        <div id="donate-card">
+            <img id="donate-card__icons" src="./assets/icons/Pay-methods.svg" alt="">
+            <p class="text-error" id="donate-card__text-4">Write your all card info! (Number, MM, YY and CVC)</p>
+            <div id="donate-card__pay">
+                <div id="donate-card__pay-container-1">
+                    <img src="./assets/icons/card.svg" alt="">
+                    <input placeholder="Card Number" type="number" id="donate-card__pay-input-1" class="donate-card__pay-input-1">
+                </div>
+                <div id="donate-card__pay-container-2">
+                    <input placeholder="MM" type="number" id="donate-card__pay-input" class="donate-card__pay-input-2">
+                    /
+                    <input placeholder="YY" type="number" id="donate-card__pay-input" class="donate-card__pay-input-3">
+                    <input placeholder="CVC" type="number" id="donate-card__pay-input" class="donate-card__pay-input-4">
+                </div>
+            </div>
+        </div>
+        <button id="donate-send" class="send-btn">send</button>
+        <div id="donate-ps">
+            <img src="./assets/icons/protect.svg" alt="">
+            <p id="donate-ps__text">Your payment is protected</p>
+        </div>
+    </section>
+    
+    <script type="module" src="script.js"></script>
 </body>
 </html>
