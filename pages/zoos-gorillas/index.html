@@ -1,16 +1,19 @@
 <!DOCTYPE html>
 <html lang="en">
+
 <head>
     <meta charset="UTF-8">
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Zoos</title>
     <link rel="stylesheet" href="style.css">
+    <link rel="stylesheet" href="./media/media.css">
     <link rel="stylesheet" href="../../assets/others/others.css">
 </head>
+
 <body>
     <header class="header">
-        <a class="logo" href="">
+        <a class="logo" href="../../index.html">
             <p class="logo-title">online</p>
             <div class="logo-container">
                 <p class="logo-title">Z</p>
@@ -18,10 +21,10 @@
             </div>
         </a>
         <nav class="nav">
-            <a href="" class="nav-link">About</a>
-            <a href="" class="nav-link">Map</a>
+            <a href="../../index.html" class="nav-link">About</a>
+            <a href="../map/index.html" class="nav-link">Map</a>
             <a href="" class="nav-link">Zoos</a>
-            <a href="" class="nav-link">Contact us</a>
+            <button class="nav-link" id="nav-button">Contact us</button>
             <a href="https://www.figma.com/file/vzrwoqf0kSG1uOify8BRBR/online-zoo?node-id=0%3A1" class="nav-link">Design</a>
         </nav>
         <div class="header-container">
@@ -34,29 +37,27 @@
     <section class="main-section">
         <aside class="aside">
             <div class="aside-container">
-                <a href="#/zoos/pandas" onclick="locationResolver('/zoos/pandas/')" class="aside-link">
-                    <img class="aside-link__img" src="./assets/images/Pandas.png" alt="">
+                <a href="../zoos-pandas/index.html" class="aside-link">
+                    <img class="aside-link__img" src="../../assets/images/Pandas.png" alt="">
                 </a>
                 <h3 class="aside-name">Pandas</h3>
-        
             </div>
             <div class="aside-container">
-                <a href="#/zoos/eagles" onclick="locationResolver('/zoos/eagles/')" class="aside-link">
-                    <img class="aside-link__img" src="./assets/images/eagles.png" alt="">
+                <a href="../zoos-eagles/index.html" class="aside-link">
+                    <img class="aside-link__img" src="../../assets/images/eagles.png" alt="">
                 </a>
                 <h3 class="aside-name">eagles</h3>
-        
             </div>
             <div class="aside-container">
-                <a href="#/zoos/gorillas" onclick="locationResolver('/zoos/gorillas/')" class="aside-link">
-                    <img class="aside-link__img" src="./assets/images/gorrilas.png" alt="">
+                <a href="../zoos-gorillas/index.html" class="aside-link">
+                    <img class="aside-link__img" src="../../assets/images/gorrilas.png" alt="">
+                    <img class="aside-link__bg" src="../../assets/images/Vector.png" alt="">
                 </a>
-                <h3 class="aside-name">gorrilas</h3>
-        
+                <h3 class="aside-name">gorillas</h3>
             </div>
             <div class="aside-container">
-                <a href="#/zoos/alligators" onclick="locationResolver('/zoos/alligators/')" class="aside-link">
-                    <img class="aside-link__img" src="./assets/images/aligators.png" alt="">
+                <a href="../zoos-alligators/index.html" class="aside-link">
+                    <img class="aside-link__img" src="../../assets/images/aligators.png" alt="">
                 </a>
                 <h3 class="aside-name">aligators</h3>
             </div>
@@ -114,19 +115,19 @@
                 <h2 class="information-title">Interesting facts</h2>
                 <ul class="facts-container">
                     <li class="facts-card">
-                        <p class="facts-text">The eastern gorilla is a critically endangered species of the genus Gorilla and the largest living primate.</p>    
+                        <p class="facts-text">The eastern gorilla is a critically endangered species of the genus Gorilla and the largest living primate.</p>
                     </li>
                     <li class="facts-card">
-                        <p class="facts-text">Gorillas tend to have larger group sizes than their western relatives, numbering up to 35 individuals.</p>    
+                        <p class="facts-text">Gorillas tend to have larger group sizes than their western relatives, numbering up to 35 individuals.</p>
                     </li>
                     <li class="facts-card">
-                        <p class="facts-text">The gorillas can choose where to sleep and they often choose to bed down inside their night building, but they sometimes sleep outside too.</p>    
+                        <p class="facts-text">The gorillas can choose where to sleep and they often choose to bed down inside their night building, but they sometimes sleep outside too.</p>
                     </li>
                     <li class="facts-card">
-                        <p class="facts-text">Female pandas give birth to one or two cubs every two years. Cubs stay with their mothers for 18 months before venturing off on their own.</p>    
+                        <p class="facts-text">Female pandas give birth to one or two cubs every two years. Cubs stay with their mothers for 18 months before venturing off on their own.</p>
                     </li>
                     <li class="facts-card">
-                        <p class="facts-text">Because they eat so much fibrous vegetation, gorillas spend a lot of time resting and digesting.</p>    
+                        <p class="facts-text">Because they eat so much fibrous vegetation, gorillas spend a lot of time resting and digesting.</p>
                     </li>
                     <li class="facts-card">
                         <p class="facts-text">Primary threats to the eastern gorilla include habitat destruction for residential, commercial, and agricultural purposes, habitat fragmentation caused by transportation corridors and resource extraction, as well as disease.</p>
@@ -136,10 +137,10 @@
         </section>
     </section>
     <section class="donate">
-        <button class="donate-btn">Donate to volunteers</button>
+        <button class="donate-btn" id="donate-open">Donate to volunteers</button>
     </section>
     <footer class="footer">
-        <a class="logo" href="">
+        <a class="logo" href="../../index.html">
             <p class="logo-title">online</p>
             <div class="logo-container">
                 <p class="logo-title">Z</p>
@@ -147,10 +148,10 @@
             </div>
         </a>
         <nav class="nav">
-            <a href="" class="nav-link">About</a>
-            <a href="" class="nav-link">Map</a>
+            <a href="../../index.html" class="nav-link">About</a>
+            <a href="../map/index.html" class="nav-link">Map</a>
             <a href="" class="nav-link">Zoos</a>
-            <a href="" class="nav-link">Contact us</a>
+            <button class="nav-link" id="nav-button">Contact us</button>
             <a href="https://www.figma.com/file/vzrwoqf0kSG1uOify8BRBR/online-zoo?node-id=0%3A1" class="nav-link">Design</a>
         </nav>
         <div class="footer-container">
@@ -158,7 +159,91 @@
             <p class="footer-author footer-author-2"> ©RSSchool and ©Yem Digital 2021</p>
         </div>
     </footer>
-    <script src="./pages/main/script.js"></script>
-    <script src="script.js"></script>
+
+    <!--Contact-us || pop-up-->
+    <section id="contact">
+        <button id="contact-close" class="btn-close">
+        </button>
+        <h2 id="contact-title">contact us</h2>
+        <form id="contact-form" action="">
+            <div id="contact-card">
+                <h3 id="contact-card__subtitle">Name</h3>
+                <p class="text-error" id="contact-card__text-1">Write your name here!</p>
+                <input type="text" id="contact-card__input" class=" contact-card__input-1">
+            </div>
+            <div id="contact-card">
+                <h3 id="contact-card__subtitle">Email</h3>
+                <p class="text-error" id="contact-card__text-2">Write your email here!</p>
+                <input type="text" id="contact-card__input" class="contact-card__input-2">
+            </div>
+            <div id="contact-card">
+                <h3 id="contact-card__subtitle">Your Message</h3>
+                <p class="text-error" id="contact-card__text-3">Write something message here!</p>
+                <input type="text" id="contact-card__input-big">
+            </div>
+        </form>
+        <button id="contact-btn" class="send-btn">send</button>
+    </section>
+
+    <!--Donation || pop-up-->
+    <section id="donate">
+        <button id="donate-close" class="btn-close">
+        </button>
+        <h2 id="donate-title">Donate to volunteers</h2>
+        <p id="donate-text">Support your favourite animals. It is as simple as buying a cup of coffee.</p>
+        <div id="donate-container">
+            <div id="donate-card">
+                <h2 id="donate-card__subtitle">Choose an animal</h2>
+                <p class="text-error" id="donate-card__text-1">Choose your animals! (Pandas, eagles, gorillas, alligators)</p>
+                <input type="text" class="donate-card__input-1" id="donate-card__input">
+            </div>
+            <div id="donate-payments">
+                <h2 id="donate-card__subtitle">payments</h2>
+                <div id="donate-payments__card">
+                    <button id="donate-payments__card-btn">Monthly</button>
+                    <button id="donate-payments__card-btn">One-time</button>
+                </div>
+                <button id="donate-payments__btn">3$</button>
+                <button id="donate-payments__btn">5$</button>
+                <button id="donate-payments__btn">10$</button>
+                <button id="donate-payments__btn">$25</button>
+            </div>
+        </div>
+        <div id="donate-card">
+            <h2 id="donate-card__subtitle">Your name</h2>
+            <p class="text-error" id="donate-card__text-2">Write your name!</p>
+            <input type="text" class="donate-card__input-2" id="donate-card__input">
+        </div>
+        <div id="donate-card">
+            <h2 id="donate-card__subtitle">Your email</h2>
+            <p class="text-error" id="donate-card__text-3">Write your email!</p>
+            <input type="text" class="donate-card__input-3" id="donate-card__input">
+        </div>
+        <div id="donate-card">
+            <img id="donate-card__icons" src="../../assets/icons/Pay-methods.svg" alt="">
+            <p class="text-error" id="donate-card__text-4">Write your all card info!<br> (Number, MM, YY and CVC)</p>
+            <p class="text-error" id="donate-card__text-5">The card number is written incorrectly.<br> Example: 8203 5432 7854 2519</p>
+            <div id="donate-card__pay">
+                <div id="donate-card__pay-container-1">
+                    <img src="../../assets/icons/card.svg" alt="">
+                    <input placeholder="Card Number" id="donate-card__pay-input-1" class="donate-card__pay-input-1">
+                </div>
+                <div id="donate-card__pay-container-2">
+                    <input placeholder="MM" type="number" id="donate-card__pay-input" class="donate-card__pay-input-2">
+                    /
+                    <input placeholder="YY" type="number" id="donate-card__pay-input" class="donate-card__pay-input-3">
+                    <input placeholder="CVC" type="number" id="donate-card__pay-input" class="donate-card__pay-input-4">
+                </div>
+            </div>
+        </div>
+        <button id="donate-send" class="send-btn">send</button>
+        <div id="donate-ps">
+            <img src="../../assets/icons/protect.svg" alt="">
+            <p id="donate-ps__text">Your payment is protected</p>
+        </div>
+    </section>
+
+    <script type="module" src="../../script.js"></script>
 </body>
+
 </html>

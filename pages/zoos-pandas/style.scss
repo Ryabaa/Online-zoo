@@ -13,6 +13,10 @@ $boxShadow: #b9d5d999;
     transition: all 0.3s ease;
 }
 
+.nav-link:nth-child(3) {
+    border-bottom: 2px solid;
+}
+
 .aside {
     &-link {
         position: relative;
@@ -22,7 +26,6 @@ $boxShadow: #b9d5d999;
         &__bg {
             position: absolute;
             z-index: 0;
-            display: none;
         }
         &__img {
             width: 76px;

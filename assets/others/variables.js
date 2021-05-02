@@ -1,6 +1,4 @@
-let obj = {
-    main: document.querySelector(".main"),
-    zoosLink_bg: document.querySelector(".aside-link__bg"),
+export default {
     //---------------------------------Contacts-------------------------
     contact: document.getElementById("contact"),
     contactOpen: document.getElementById("nav-button"),
@@ -28,17 +26,16 @@ let obj = {
     donateOpen: document.getElementById("donate-open"),
     donateClose: document.getElementById("donate-close"),
     donateSend: document.getElementById("donate-send"),
-    donateInput_1: document.querySelector(".donate-card__input-1").value,
-    donateInput_2: document.querySelector(".donate-card__input-2").value,
-    donateInput_3: document.querySelector(".donate-card__input-3").value,
-    donatePayInput_1: document.querySelector(".donate-card__pay-input-1").value,
-    donatePayInput_2: document.querySelector(".donate-card__pay-input-2").value,
-    donatePayInput_3: document.querySelector(".donate-card__pay-input-3").value,
-    donatePayInput_4: document.querySelector(".donate-card__pay-input-4").value,
+    donateInput_1: document.querySelector(".donate-card__input-1"),
+    donateInput_2: document.querySelector(".donate-card__input-2"),
+    donateInput_3: document.querySelector(".donate-card__input-3"),
+    donatePayInput_1: document.querySelector(".donate-card__pay-input-1"),
+    donatePayInput_2: document.querySelector(".donate-card__pay-input-2"),
+    donatePayInput_3: document.querySelector(".donate-card__pay-input-3"),
+    donatePayInput_4: document.querySelector(".donate-card__pay-input-4"),
     donateErrText_1: document.getElementById("donate-card__text-1"),
     donateErrText_2: document.getElementById("donate-card__text-2"),
     donateErrText_3: document.getElementById("donate-card__text-3"),
     donateErrText_4: document.getElementById("donate-card__text-4"),
+    donateErrText_5: document.getElementById("donate-card__text-5"),
 };
-
-export default obj;
