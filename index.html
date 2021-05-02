@@ -1,23 +1,19 @@
 <!DOCTYPE html>
 <html lang="en">
+
 <head>
     <meta charset="UTF-8">
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Online Zoo</title>
     <link rel="stylesheet" href="./pages/main/style.css">
-    <link rel="stylesheet" href="./pages/map/style.css">
-    <link rel="stylesheet" href="./pages/zoos-pandas/style.css">
-    <link rel="stylesheet" href="./pages/error-404/style.css">
     <link rel="stylesheet" href="./pages/main/media/media.css">
-    <link rel="stylesheet" href="./pages/map/media/media.css">
-    <link rel="stylesheet" href="./pages/zoos/media/media.css">
-    <link rel="stylesheet" href="./pages/error-404/media/media.css">
     <link rel="stylesheet" href="./assets/others/others.css">
 </head>
-<body onload="locationResolver('/about/')">
+
+<body id="body">
     <header class="header">
-        <a class="logo" href="#/about" onclick="locationResolver('/about/')">
+        <a class="logo" href="">
             <p class="logo-title">online</p>
             <div class="logo-container">
                 <p class="logo-title">Z</p>
@@ -25,10 +21,10 @@
             </div>
         </a>
         <nav class="nav">
-            <a href="#/about" onclick="locationResolver('/about/')" class="nav-link">About</a>
-            <a href="#/map" onclick="locationResolver('/map/')" class="nav-link">Map</a>
-            <a href="#/zoos/pandas" onclick="locationResolver('/zoos/pandas/')" class="nav-link">Zoos</a>
-            <button class="nav-link">Contact us</button>
+            <a href="" class="nav-link">About</a>
+            <a href="./pages/map/index.html" class="nav-link">Map</a>
+            <a href="./pages/zoos-pandas/index.html" class="nav-link">Zoos</a>
+            <button class="nav-link" id="nav-button">Contact us</button>
             <a href="https://www.figma.com/file/vzrwoqf0kSG1uOify8BRBR/online-zoo?node-id=0%3A1" class="nav-link">Design</a>
         </nav>
         <div class="header-container">
@@ -39,7 +35,171 @@
         </div>
     </header>
     <main class="main">
-
+        <section class="hero">
+            <div class="hero-container">
+                <h1 class="hero__title">Watch your favorite <span class="hero__title-span">animals online</span></h1>
+                <p class="hero__text">Observe different animals from around the world online in live time. Help vulunteers to take a good care of animals, donate to your favorite ones.</p>
+                <a href="" class="hero__link">Watch now</a>
+            </div>
+            <div class="hero-image">
+                <img src="./assets/images/Panda.png" alt="Panda">
+                <a class="hero-image__link" href="">
+                    <img src="./assets/icons/Frame.svg" alt="watch">
+                </a>
+            </div>
+            <h2 class="how">How it works</h2>
+        </section>
+        <section class="about">
+            <div class="about-container">
+                <div class="about-card">
+                    <img src="./assets/icons/binoculars.svg" alt="" class="about-card__img">
+                </div>
+                <p class="about-container__text">Keep an eye on your favourite animals online</p>
+            </div>
+            <div class="about-container">
+                <div class="about-card">
+                    <img src="./assets/icons/paw.svg" alt="" class="about-card__img">
+                </div>
+                <p class="about-container__text">Become a part of the communtity</p>
+            </div>
+            <div class="about-container">
+                <div class="about-card">
+                    <img src="./assets/icons/heart.svg" alt="" class="about-card__img">
+                </div>
+                <p class="about-container__text">Support animals with the donations</p>
+            </div>
+        </section>
+        <section>
+            <img src="./assets/images/Illustrations-1.png" class="bg-image" alt="bg-image">
+        </section>
+        <section class="pets">
+            <h2 class="pets-title">Pets in zoo</h2>
+            <button class="pets-button">Choose your Favorite</button>
+            <div class="pets-container">
+                <div class="pets-container__card">
+                    <div class="pets-container__card-top">
+                        <a class="pets-container__card-link" href="./pages/zoos-pandas/index.html" id="zoos-pandas"><img src="./assets/images/Pandas.png" alt="pandas"></a>
+                    </div>
+                    <div class="pets-container__card-bottom">
+                        <h2 class="pets-container__card-title">Pandas</h2>
+                        <p class="pets-container__card-text">Shenshuping Gengda Panda Center</p>
+                        <img src="./assets/icons/tv.svg" alt="" class="pets-container__card-icon">
+                    </div>
+                </div>
+                <div class="pets-container__card">
+                    <div class="pets-container__card-top">
+                        <a class="pets-container__card-link" href="./pages/zoos-eagles/index.html"><img src="./assets/images/eagles.png" alt="eagles"></a>
+                    </div>
+                    <div class="pets-container__card-bottom">
+                        <h2 class="pets-container__card-title">Eagles</h2>
+                        <p class="pets-container__card-text">Catalina Island</p>
+                        <img src="./assets/icons/tv.svg" alt="" class="pets-container__card-icon">
+                    </div>
+                </div>
+                <div class="pets-container__card">
+                    <div class="pets-container__card-top">
+                        <a class="pets-container__card-link" href="./pages/zoos-gorillas/index.html"><img src="./assets/images/gorrilas.png" alt="gorillas"></a>
+                    </div>
+                    <div class="pets-container__card-bottom">
+                        <h2 class="pets-container__card-title">Gorillas</h2>
+                        <p class="pets-container__card-text">GRACE gorillas</p>
+                        <img src="./assets/icons/tv.svg" alt="" class="pets-container__card-icon">
+                    </div>
+                </div>
+                <div class="pets-container__card">
+                    <div class="pets-container__card-top">
+                        <a class="pets-container__card-link" href="./pages/zoos-alligators/index.html"><img src="./assets/images/aligators.png" alt="aligators"></a>
+                    </div>
+                    <div class="pets-container__card-bottom">
+                        <h2 class="pets-container__card-title">Aligators</h2>
+                        <p class="pets-container__card-text">St. Augustine's Alligator Farm Zoological Park</p>
+                        <img src="./assets/icons/tv.svg" alt="" class="pets-container__card-icon">
+                    </div>
+                </div>
+                <div class="pets-container__card">
+                    <div class="pets-container__card-top">
+                        <a class="pets-container__card-link" href=""><img src="./assets/images/elephants.png" alt="elephants"></a>
+                    </div>
+                    <div class="pets-container__card-bottom">
+                        <h2 class="pets-container__card-title">Elephants</h2>
+                        <p class="pets-container__card-text">Tembe Elephant Park</p>
+                        <img src="./assets/icons/tv.svg" alt="" class="pets-container__card-icon">
+                    </div>
+                </div>
+                <div class="pets-container__card">
+                    <div class="pets-container__card-top">
+                        <a class="pets-container__card-link" href=""><img src="./assets/images/lemurs.png" alt="lemurs"></a>
+                    </div>
+                    <div class="pets-container__card-bottom">
+                        <h2 class="pets-container__card-title">Lemurs</h2>
+                        <p class="pets-container__card-text">Madagascar</p>
+                        <img src="./assets/icons/tv.svg" alt="" class="pets-container__card-icon">
+                    </div>
+                </div>
+            </div>
+        </section>
+        <section class="pay">
+            <h2 class="pay-title">Pay and feed</h2>
+            <button id="donate-open" class="pay-button">Donate to volunteers</button>
+            <div class="pay-container">
+                <div class="pay-container__circle pay-container__circle-1"></div>
+                <p class="pay-container__text">You donate to your favourite animals</p>
+            </div>
+            <img src="./assets/images/arrow.svg" alt="" class="pay-arrow">
+            <div class="pay-container">
+                <div class="pay-container__circle pay-container__circle-2"></div>
+                <p class="pay-container__text">Zoo Keepers feed animals with their favourite food</p>
+            </div>
+            <img src="./assets/images/arrow.svg" alt="" class="pay-arrow">
+            <div class="pay-container">
+                <div class="pay-container__circle pay-container__circle-3"></div>
+                <p class="pay-container__text">Animals are healthy and happy</p>
+            </div>
+        </section>
+        <section class="testimonials">
+            <h2 class="testimonials-title">Testimonials</h2>
+            <button id="feedback-open" class="testimonials-button">Leave feedback</button>
+            <div class="testimonials-container">
+                <div class="testimonials-tcard">
+                    <h3 class="testimonials-tcard__date">5 November 2020</h3>
+                    <p class="testimonials-tcard__text">Awesome place to observe my favourite aligators at Florida, the quality of the video is great. </p>
+                </div>
+                <div class="testimonials-bcard">
+                    <img src="./assets/images/adam.png" alt="">
+                    <p class="testimonials-bcard__name">Adam, Spain</p>
+                </div>
+            </div>
+            <div class="testimonials-container">
+                <div class="testimonials-tcard">
+                    <h3 class="testimonials-tcard__date">12 January 2021</h3>
+                    <p class="testimonials-tcard__text">Awesome place to observe my favourite aligators at Florida, the quality of the video is great. </p>
+                </div>
+                <div class="testimonials-bcard">
+                    <img src="./assets/images/chris.png" alt="">
+                    <p class="testimonials-bcard__name">Chris, Australia</p>
+                </div>
+            </div>
+            <div class="testimonials-container">
+                <div class="testimonials-tcard">
+                    <h3 class="testimonials-tcard__date">12 April 2020</h3>
+                    <p class="testimonials-tcard__text">Awesome place to observe my favourite aligators at Florida, the quality of the video is great. </p>
+                </div>
+                <div class="testimonials-bcard">
+                    <img src="./assets/images/amely.png" alt="">
+                    <p class="testimonials-bcard__name">Amely, USA</p>
+                </div>
+            </div>
+        </section>
+        <section class="animals">
+            <h2 class="animals-title">Look at these beautiful animals</h2>
+            <a href="./pages/zoos-pandas/index.html" class="animals-links"><img src="./assets/images/Pandas.png" class="animals-img" alt=""></a>
+            <a href="./pages/zoos-gorillas/index.html" class="animals-links"><img src="./assets/images/gorrilas.png" class="animals-img" alt=""></a>
+            <a href="./pages/zoos-eagles/index.html" class="animals-links"><img src="./assets/images/eagles.png" class="animals-img" alt=""></a>
+            <a href="./pages/zoos-alligators/index.html" id="zoos-alligators" class="animals-links"><img src="./assets/images/aligators.png" class="animals-img" alt=""></a>
+            <a href="" class="animals-links"><img src="./assets/images/elephants.png" class="animals-img" alt=""></a>
+            <a href="" class="animals-links"><img src="./assets/images/lemurs.png" class="animals-img" alt=""></a>
+            <a href="./pages/zoos-pandas/index.html" class="animals-links"><img src="./assets/images/Pandas.png" class="animals-img" alt=""></a>
+        </section>
     </main>
     <footer class="footer">
         <a class="logo" href="">
@@ -50,10 +210,10 @@
             </div>
         </a>
         <nav class="nav">
-            <a href="#/" onclick="locationResolver('/')" class="nav-link">About</a>
-            <a href="#/map" onclick="locationResolver('/map/')" class="nav-link">Map</a>
-            <a href="#/zoos/pandas" onclick="locationResolver('/zoos/pandas/')" class="nav-link">Zoos</a>
-            <button class="nav-link">Contact us</button>
+            <a href="" class="nav-link">About</a>
+            <a href="./pages/map/index.html" class="nav-link">Map</a>
+            <a href="./pages/zoos-pandas/index.html" class="nav-link">Zoos</a>
+            <button class="nav-link" id="nav-button">Contact us</button>
             <a href="https://www.figma.com/file/vzrwoqf0kSG1uOify8BRBR/online-zoo?node-id=0%3A1" class="nav-link">Design</a>
         </nav>
         <div class="footer-container">
@@ -61,7 +221,116 @@
             <p class="footer-author footer-author-2"> ©RSSchool and ©Yem Digital 2021</p>
         </div>
     </footer>
-    <script src="./pages/main/script.js"></script>
-    <script src="index.js"></script>
+
+    <!--Contact-us || pop-up-->
+    <section id="contact">
+        <button id="contact-close" class="btn-close">
+        </button>
+        <h2 id="contact-title">contact us</h2>
+        <form id="contact-form" action="">
+            <div id="contact-card">
+                <h3 id="contact-card__subtitle">Name</h3>
+                <p class="text-error" id="contact-card__text-1">Write your name here!</p>
+                <input type="text" id="contact-card__input" class=" contact-card__input-1">
+            </div>
+            <div id="contact-card">
+                <h3 id="contact-card__subtitle">Email</h3>
+                <p class="text-error" id="contact-card__text-2">Write your email here!</p>
+                <input type="text" id="contact-card__input" class="contact-card__input-2">
+            </div>
+            <div id="contact-card">
+                <h3 id="contact-card__subtitle">Your Message</h3>
+                <p class="text-error" id="contact-card__text-3">Write something message here!</p>
+                <input type="text" id="contact-card__input-big">
+            </div>
+        </form>
+        <button id="contact-btn" class="send-btn">send</button>
+    </section>
+
+    <!--Feedback || pop-up-->
+    <section id="feedback">
+        <button id="feedback-close" class="btn-close">
+        </button>
+        <h2 id="feedback-title">Leave feedback</h2>
+        <form id="feedback-form" action="">
+            <div id="feedback-card">
+                <h3 id="feedback-card__subtitle">Name</h3>
+                <p class="text-error" id="feedback-card__text-1">Write your name here!</p>
+                <input type="text" id="feedback-card__input" class=" feedback-card__input-1">
+            </div>
+            <div id="feedback-card">
+                <h3 id="feedback-card__subtitle">Email</h3>
+                <p class="text-error" id="feedback-card__text-2">Write your email here!</p>
+                <input type="text" id="feedback-card__input" class="feedback-card__input-2">
+            </div>
+            <div id="feedback-card">
+                <h3 id="feedback-card__subtitle">feedback</h3>
+                <p class="text-error" id="feedback-card__text-3">Write your feedback here!</p>
+                <input type="text" id="feedback-card__input-big">
+            </div>
+        </form>
+        <button id="feedback-btn" class="send-btn">send</button>
+    </section>
+
+    <!--Donation || pop-up-->
+    <section id="donate">
+        <button id="donate-close" class="btn-close">
+        </button>
+        <h2 id="donate-title">Donate to volunteers</h2>
+        <p id="donate-text">Support your favourite animals. It is as simple as buying a cup of coffee.</p>
+        <div id="donate-container">
+            <div id="donate-card">
+                <h2 id="donate-card__subtitle">Choose an animal</h2>
+                <p class="text-error" id="donate-card__text-1">Choose your animals! (Pandas, eagles, gorillas, alligators)</p>
+                <input type="text" class="donate-card__input-1" id="donate-card__input">
+            </div>
+            <div id="donate-payments">
+                <h2 id="donate-card__subtitle">payments</h2>
+                <div id="donate-payments__card">
+                    <button id="donate-payments__card-btn">Monthly</button>
+                    <button id="donate-payments__card-btn">One-time</button>
+                </div>
+                <button id="donate-payments__btn">3$</button>
+                <button id="donate-payments__btn">5$</button>
+                <button id="donate-payments__btn">10$</button>
+                <button id="donate-payments__btn">$25</button>
+            </div>
+        </div>
+        <div id="donate-card">
+            <h2 id="donate-card__subtitle">Your name</h2>
+            <p class="text-error" id="donate-card__text-2">Write your name!</p>
+            <input type="text" class="donate-card__input-2" id="donate-card__input">
+        </div>
+        <div id="donate-card">
+            <h2 id="donate-card__subtitle">Your email</h2>
+            <p class="text-error" id="donate-card__text-3">Write your email!</p>
+            <input type="text" class="donate-card__input-3" id="donate-card__input">
+        </div>
+        <div id="donate-card">
+            <img id="donate-card__icons" src="./assets/icons/Pay-methods.svg" alt="">
+            <p class="text-error" id="donate-card__text-4">Write your all card info!<br> (Number, MM, YY and CVC)</p>
+            <p class="text-error" id="donate-card__text-5">The card number is written incorrectly.<br> Example: 8203 5432 7854 2519</p>
+            <div id="donate-card__pay">
+                <div id="donate-card__pay-container-1">
+                    <img src="./assets/icons/card.svg" alt="">
+                    <input placeholder="Card Number" id="donate-card__pay-input-1" class="donate-card__pay-input-1">
+                </div>
+                <div id="donate-card__pay-container-2">
+                    <input placeholder="MM" type="number" id="donate-card__pay-input" class="donate-card__pay-input-2">
+                    /
+                    <input placeholder="YY" type="number" id="donate-card__pay-input" class="donate-card__pay-input-3">
+                    <input placeholder="CVC" type="number" id="donate-card__pay-input" class="donate-card__pay-input-4">
+                </div>
+            </div>
+        </div>
+        <button id="donate-send" class="send-btn">send</button>
+        <div id="donate-ps">
+            <img src="./assets/icons/protect.svg" alt="">
+            <p id="donate-ps__text">Your payment is protected</p>
+        </div>
+    </section>
+
+    <script type="module" src="script.js"></script>
 </body>
+
 </html>

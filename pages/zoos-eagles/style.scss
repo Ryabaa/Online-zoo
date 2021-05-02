@@ -13,22 +13,34 @@ $boxShadow: #b9d5d999;
     transition: all 0.3s ease;
 }
 
+.nav-link:nth-child(3) {
+    border-bottom: 2px solid;
+}
+
 .aside {
     &-link {
         position: relative;
         display: flex;
         justify-content: center;
         align-items: center;
+        &__bg {
+            position: absolute;
+            z-index: 0;
+        }
         &__img {
+            z-index: 1;
             width: 76px;
             @include tr;
             &:hover {
-                filter: drop-shadow(-10px 2px 5px $primary);
+                opacity: 0.6;
             }
         }
     }
     &-container {
         width: 105px;
+        display: flex;
+        flex-direction: column;
+        row-gap: 10px;
         &:not(:first-child) {
             margin-top: 40px;
         }
