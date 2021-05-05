@@ -34,23 +34,23 @@ $boxShadow: #b9d5d999;
         max-width: 700px;
         padding-top: 103px;
     }
-    &__title {
+    &-title {
         font-family: Rubik;
         color: $hero-color;
         font-size: 72px;
         font-weight: 300;
-        &-span {
+        &__span {
             font-family: Rubik;
             font-weight: 500;
             font-size: 72px;
         }
     }
-    &__text {
+    &-text {
         max-width: 480px;
         margin: 27px 0 87px 0;
         color: $hero-color;
     }
-    &__link {
+    &-link {
         width: 252px;
         height: 52px;
         display: flex;

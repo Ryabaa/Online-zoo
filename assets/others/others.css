@@ -646,4 +646,195 @@ body {
   line-height: 16px;
   color: #2d2d2d;
 }
+
+.register {
+  display: none;
+  -webkit-box-shadow: 0 0 500px #2d2d2d;
+          box-shadow: 0 0 500px #2d2d2d;
+  max-width: 568px;
+  position: fixed;
+  top: 50%;
+  left: 50%;
+  -webkit-transform: translate(-50%, -50%);
+          transform: translate(-50%, -50%);
+  background: #fafafa;
+  -webkit-box-orient: vertical;
+  -webkit-box-direction: normal;
+      -ms-flex-direction: column;
+          flex-direction: column;
+  -webkit-box-pack: center;
+      -ms-flex-pack: center;
+          justify-content: center;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  border-radius: 20px;
+  z-index: 5;
+}
+
+.register-header {
+  background-color: #2a8086;
+  border-radius: 20px 20px 0 0;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  height: 125px;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  -webkit-box-pack: center;
+      -ms-flex-pack: center;
+          justify-content: center;
+  width: 100%;
+}
+
+.register-main {
+  padding: 32px 60px 46px 60px;
+}
+
+.register-togglers {
+  display: -ms-grid;
+  display: grid;
+  -ms-grid-columns: (1fr)[2];
+      grid-template-columns: repeat(2, 1fr);
+  height: 40px;
+}
+
+.register-togglers__btn {
+  height: 40px;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-pack: center;
+      -ms-flex-pack: center;
+          justify-content: center;
+  -webkit-box-align: start;
+      -ms-flex-align: start;
+          align-items: flex-start;
+  font-size: 18px;
+  line-height: 21px;
+  text-transform: uppercase;
+  color: #0d444d;
+}
+
+.register-togglers__btn-dark {
+  border-bottom: 4px solid #2a8086;
+}
+
+.register-togglers__btn-light {
+  border-bottom: 4px solid #c5e1e5;
+}
+
+.register-loginThrough {
+  display: -ms-grid;
+  display: grid;
+  -ms-grid-columns: (1fr)[2];
+      grid-template-columns: repeat(2, 1fr);
+  -webkit-column-gap: 20px;
+          column-gap: 20px;
+  padding: 32px 0;
+}
+
+.register-loginThrough__btn {
+  -webkit-column-gap: 15px;
+          column-gap: 15px;
+  height: 54px;
+  background: #fff;
+  -webkit-box-shadow: 0px 2px 30px #0000000f;
+          box-shadow: 0px 2px 30px #0000000f;
+  border-radius: 10px;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-pack: center;
+      -ms-flex-pack: center;
+          justify-content: center;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  font-size: 16px;
+  line-height: 19px;
+  color: #2d2d2d;
+}
+
+.register-container {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-orient: vertical;
+  -webkit-box-direction: normal;
+      -ms-flex-direction: column;
+          flex-direction: column;
+  row-gap: 20px;
+}
+
+.register-card {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-orient: vertical;
+  -webkit-box-direction: normal;
+      -ms-flex-direction: column;
+          flex-direction: column;
+}
+
+.register-card__subtitle {
+  margin-bottom: 8px;
+  font-size: 14px;
+  line-height: 16px;
+  text-transform: uppercase;
+  color: #0d444d;
+}
+
+.register-card__input {
+  -webkit-box-shadow: 0px 2px 30px #0000000f;
+          box-shadow: 0px 2px 30px #0000000f;
+  border-radius: 10px;
+  width: 448px;
+  height: 54px;
+  text-indent: 20px;
+}
+
+.register-agreement {
+  padding: 30px 0;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  -webkit-box-pack: start;
+      -ms-flex-pack: start;
+          justify-content: start;
+  -webkit-column-gap: 20px;
+          column-gap: 20px;
+}
+
+.register-agreement__checkbox {
+  width: 22px;
+  height: 22px;
+}
+
+.register-agreement__text {
+  font-size: 16px;
+  line-height: 29px;
+  color: #2d2d2d;
+}
+
+.register-agreement__text-link {
+  color: #2d2d2d;
+  text-decoration: underline;
+}
+
+.register-btn {
+  margin-top: 20px;
+}
+
+#login {
+  top: 40.5%;
+}
+
+.login-btn {
+  margin-top: 30px;
+}
 /*# sourceMappingURL=others.css.map */

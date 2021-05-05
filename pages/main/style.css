@@ -32,26 +32,26 @@
   padding-top: 103px;
 }
 
-.hero__title {
+.hero-title {
   font-family: Rubik;
   color: #f3f7f8;
   font-size: 72px;
   font-weight: 300;
 }
 
-.hero__title-span {
+.hero-title__span {
   font-family: Rubik;
   font-weight: 500;
   font-size: 72px;
 }
 
-.hero__text {
+.hero-text {
   max-width: 480px;
   margin: 27px 0 87px 0;
   color: #f3f7f8;
 }
 
-.hero__link {
+.hero-link {
   width: 252px;
   height: 52px;
   display: -webkit-box;
@@ -75,7 +75,7 @@
   transition: all 0.3s ease;
 }
 
-.hero__link:hover {
+.hero-link:hover {
   background: #2a8086;
   color: #fff;
 }

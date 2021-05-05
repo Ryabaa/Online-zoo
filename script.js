@@ -1,11 +1,15 @@
 import variables from "./assets/others/variables.js";
 
-document.querySelector(".header-container__search").addEventListener("click", function () {
-    document.querySelector(".header-container__input").style.display = "unset";
+variables.headerSearch.addEventListener("click", function () {
+    variables.headerInput.style.display = "unset";
 });
 //-------------------------------------------Contact pop-up
 
-variables.contactOpen.addEventListener("click", function () {
+variables.contactOpenHeader.addEventListener("click", function () {
+    variables.contact.style.display = "flex";
+});
+
+variables.contactOpenFooter.addEventListener("click", function () {
     variables.contact.style.display = "flex";
 });
 
@@ -58,7 +62,7 @@ if (variables.donateOpen !== null) {
         variables.donate.style.display = "none";
         location.reload();
     });
-    document.getElementById("donate-open").addEventListener("click", function () {
+    variables.donateOpen.addEventListener("click", function () {
         variables.donate.style.display = "unset";
     });
 
@@ -110,5 +114,66 @@ if (variables.donateOpen !== null) {
             donate.style.display = "none";
             location.reload();
         }
+    });
+}
+
+//----------------------SignUp Pop-up-------------------------
+if (variables.signupOpen !== null) {
+    variables.signupOpen.addEventListener("click", function () {
+        variables.signup.style.display = "flex";
+    });
+
+    variables.signupClose.addEventListener("click", function () {
+        variables.signup.style.display = "none";
+        location.reload();
+    });
+
+    variables.signupSend.addEventListener("click", function () {
+        let checkboxChecked = variables.signupCheckbox.checked;
+        if (variables.signupInput_1.value.length < 2) {
+            variables.signupErrText_1.style.display = "unset";
+        } else if (variables.signupInput_2.value.length < 2) {
+            variables.signupErrText_2.style.display = "unset";
+        } else if (variables.signupInput_3.value.length < 6) {
+            variables.signupErrText_3.style.display = "unset";
+        } else if (checkboxChecked === false) {
+            variables.signupErrUnderline.style.borderBottom = "red 3px dotted";
+        } else {
+            variables.signup.style.display = "none";
+            location.reload();
+        }
+    });
+
+    variables.rightToggler.addEventListener("click", function () {
+        variables.signup.style.display = "none";
+        variables.login.style.display = "flex";
+    });
+}
+
+//-----------------------------LogIn Pop-Up---------------------------
+if (variables.loginOpen !== null) {
+    variables.loginOpen.addEventListener("click", function () {
+        variables.login.style.display = "flex";
+    });
+
+    variables.loginClose.addEventListener("click", function () {
+        variables.login.style.display = "none";
+        location.reload();
+    });
+
+    variables.loginSend.addEventListener("click", function () {
+        if (variables.loginInput_1.value.length < 2) {
+            variables.loginErrText_1.style.display = "unset";
+        } else if (variables.loginInput_2.value.length < 2) {
+            variables.loginErrText_2.style.display = "unset";
+        } else {
+            variables.login.style.display = "none";
+            location.reload();
+        }
+    });
+
+    variables.leftToggler.addEventListener("click", function () {
+        variables.login.style.display = "none";
+        variables.signup.style.display = "flex";
     });
 }
