@@ -3,18 +3,35 @@ import variables from "./assets/others/variables.js";
 variables.headerSearch.addEventListener("click", function () {
     variables.headerInput.style.display = "unset";
 });
+
+variables.menuOpen.addEventListener("click", function () {
+    if (variables.menu.style.display !== "flex") {
+        variables.menu.style.display = "flex";
+    } else {
+        variables.menu.style.display = "none";
+    }
+});
+
 //-------------------------------------------Contact pop-up
 
 variables.contactOpenHeader.addEventListener("click", function () {
     variables.contact.style.display = "flex";
+    variables.substrate.style.display = "unset";
+});
+
+variables.contactOpenMenu.addEventListener("click", function () {
+    variables.contact.style.display = "flex";
+    variables.substrate.style.display = "unset";
 });
 
 variables.contactOpenFooter.addEventListener("click", function () {
     variables.contact.style.display = "flex";
+    variables.substrate.style.display = "unset";
 });
 
 variables.contactClose.addEventListener("click", function () {
     variables.contact.style.display = "none";
+    variables.substrate.style.display = "none";
     location.reload();
 });
 
@@ -27,6 +44,7 @@ variables.contactSend.addEventListener("click", function () {
         variables.contactErrText_3.style.display = "unset";
     } else {
         variables.contact.style.display = "none";
+        variables.substrate.style.display = "none";
         location.reload();
     }
 });
@@ -35,10 +53,12 @@ variables.contactSend.addEventListener("click", function () {
 if (variables.feedbackOpen !== null) {
     variables.feedbackOpen.addEventListener("click", function () {
         variables.feedback.style.display = "flex";
+        variables.substrate.style.display = "unset";
     });
 
     variables.feedbackClose.addEventListener("click", function () {
         variables.feedback.style.display = "none";
+        variables.substrate.style.display = "none";
         location.reload();
     });
 
@@ -51,6 +71,7 @@ if (variables.feedbackOpen !== null) {
             variables.feedbackErrText_3.style.display = "unset";
         } else {
             variables.feedback.style.display = "none";
+            variables.substrate.style.display = "none";
             location.reload();
         }
     });
@@ -60,10 +81,12 @@ if (variables.feedbackOpen !== null) {
 if (variables.donateOpen !== null) {
     variables.donateClose.addEventListener("click", function () {
         variables.donate.style.display = "none";
+        variables.substrate.style.display = "none";
         location.reload();
     });
     variables.donateOpen.addEventListener("click", function () {
         variables.donate.style.display = "unset";
+        variables.substrate.style.display = "unset";
     });
 
     variables.donateSend.addEventListener("click", function () {
@@ -112,6 +135,7 @@ if (variables.donateOpen !== null) {
             variables.donateErrText_5.style.display = "unset";
         } else {
             donate.style.display = "none";
+            variables.substrate.style.display = "none";
             location.reload();
         }
     });
@@ -120,11 +144,13 @@ if (variables.donateOpen !== null) {
 //----------------------SignUp Pop-up-------------------------
 if (variables.signupOpen !== null) {
     variables.signupOpen.addEventListener("click", function () {
+        variables.substrate.style.display = "unset";
         variables.signup.style.display = "flex";
     });
 
     variables.signupClose.addEventListener("click", function () {
         variables.signup.style.display = "none";
+        variables.substrate.style.display = "none";
         location.reload();
     });
 
@@ -140,6 +166,7 @@ if (variables.signupOpen !== null) {
             variables.signupErrUnderline.style.borderBottom = "red 3px dotted";
         } else {
             variables.signup.style.display = "none";
+            variables.substrate.style.display = "none";
             location.reload();
         }
     });
@@ -154,10 +181,17 @@ if (variables.signupOpen !== null) {
 if (variables.loginOpen !== null) {
     variables.loginOpen.addEventListener("click", function () {
         variables.login.style.display = "flex";
+        variables.substrate.style.display = "unset";
+    });
+
+    variables.loginOpen2.addEventListener("click", function () {
+        variables.login.style.display = "flex";
+        variables.substrate.style.display = "unset";
     });
 
     variables.loginClose.addEventListener("click", function () {
         variables.login.style.display = "none";
+        variables.substrate.style.display = "none";
         location.reload();
     });
 
@@ -168,6 +202,7 @@ if (variables.loginOpen !== null) {
             variables.loginErrText_2.style.display = "unset";
         } else {
             variables.login.style.display = "none";
+            variables.substrate.style.display = "none";
             location.reload();
         }
     });
@@ -177,3 +212,12 @@ if (variables.loginOpen !== null) {
         variables.signup.style.display = "flex";
     });
 }
+
+variables.substrate.addEventListener("click", function () {
+    variables.substrate.style.display = "none";
+    variables.login.style.display = "none";
+    variables.signup.style.display = "none";
+    variables.donate.style.display = "none";
+    variables.feedback.style.display = "none";
+    variables.contact.style.display = "none";
+});

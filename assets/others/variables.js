@@ -1,9 +1,13 @@
 export default {
     headerSearch: document.querySelector(".header-container__search"),
     headerInput: document.querySelector(".header-container__input"),
+    substrate: document.querySelector(".substrate"),
+    menuOpen: document.getElementById("menu-open"),
+    menu: document.querySelector(".menu"),
     //---------------------------------Contacts-------------------------
     contact: document.getElementById("contact"),
     contactOpenHeader: document.getElementById("contact-open__header"),
+    contactOpenMenu: document.getElementById("contact-open__menu"),
     contactOpenFooter: document.getElementById("contact-open__footer"),
     contactClose: document.getElementById("contact-close"),
     contactSend: document.getElementById("contact-btn"),
@@ -58,6 +62,7 @@ export default {
     //----------------------------------LogIn----------------------------
     login: document.getElementById("login"),
     loginOpen: document.getElementById("login-open"),
+    loginOpen2: document.getElementById("login-open-2"),
     loginClose: document.getElementById("login-close"),
     loginSend: document.getElementById("login-send"),
     leftToggler: document.getElementById("left-toggler"),

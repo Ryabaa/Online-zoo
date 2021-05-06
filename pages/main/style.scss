@@ -13,12 +13,120 @@ $boxShadow: #b9d5d999;
     transition: all 0.3s ease;
 }
 
-.nav-link:nth-child(1) {
-    border-bottom: 2px solid;
+html {
+    font-size: 18px;
 }
 
 .header-hero {
     position: relative;
+}
+
+.nav {
+    display: grid;
+    grid-template-columns: repeat(5, auto);
+    column-gap: 52px;
+    margin-left: 53px;
+    &-link {
+        font-family: Roboto Mono;
+        font-weight: 500;
+        font-size: 1rem;
+        color: $tertiary;
+        text-transform: uppercase;
+        line-height: 40px;
+        @include tr;
+        &:hover {
+            color: $secondary;
+        }
+        &:nth-child(1) {
+            border-bottom: 2px solid;
+        }
+    }
+}
+
+.header {
+    padding: 0 90px 0 220px;
+    background: $primary;
+    min-height: 110px;
+    display: flex;
+    align-items: center;
+    position: relative;
+    margin-bottom: -2px;
+    z-index: 3;
+    filter: drop-shadow(0px 1px 10px #12575b40);
+
+    &-container {
+        display: flex;
+        flex-direction: row;
+        position: absolute;
+        right: 90px;
+        max-width: 500px;
+        &__input {
+            background: $tertiary;
+            display: none;
+        }
+        &__search {
+            width: 32px;
+            height: 32px;
+            background-image: url(../../assets/icons/search.svg);
+            @include tr;
+            &:hover {
+                filter: drop-shadow(0 0 10px $tertiary);
+                transform: rotate(360deg);
+            }
+        }
+        &__login {
+            text-transform: uppercase;
+            color: $tertiary;
+            margin: 0 18px 0 50px;
+            @include tr;
+            &:hover {
+                color: $secondary;
+            }
+        }
+        &__signup {
+            text-transform: uppercase;
+            color: $tertiary;
+            border: 1px solid $tertiary;
+            border-radius: 100px;
+            @include tr;
+            &:hover {
+                background: $tertiary;
+                color: $secondary;
+                box-shadow: 0px 2px 50px $boxShadow;
+            }
+        }
+        &__btn {
+            background: url(../../assets/icons/menu.svg) center no-repeat;
+            width: 35px;
+            height: 35px;
+        }
+    }
+}
+
+.menu {
+    filter: drop-shadow(0px 1px 10px #12575b40);
+    display: none;
+    margin-bottom: -2px;
+    z-index: 2;
+    background: $primary;
+    height: 100px;
+    flex-direction: row;
+    align-items: center;
+    justify-content: center;
+    column-gap: 30px;
+    &-link {
+        color: $tertiary;
+        font-family: Roboto Mono;
+        font-weight: 500;
+        font-size: 1rem;
+        color: $tertiary;
+        text-transform: uppercase;
+        line-height: 40px;
+        @include tr;
+        &:hover {
+            color: $secondary;
+        }
+    }
 }
 
 .hero {
@@ -37,12 +145,12 @@ $boxShadow: #b9d5d999;
     &-title {
         font-family: Rubik;
         color: $hero-color;
-        font-size: 72px;
+        font-size: 4rem;
         font-weight: 300;
         &__span {
             font-family: Rubik;
             font-weight: 500;
-            font-size: 72px;
+            font-size: 4rem;
         }
     }
     &-text {
@@ -70,10 +178,7 @@ $boxShadow: #b9d5d999;
         }
     }
     &-image {
-        height: 666px;
-        width: 804px;
         position: relative;
-
         &__link {
             position: absolute;
             transform: translate(-50%, -50%);
@@ -93,7 +198,7 @@ $boxShadow: #b9d5d999;
     font-family: Rubik;
     text-transform: uppercase;
     color: $btn-color;
-    font-size: 24px;
+    font-size: 1.33rem;
 }
 
 .about {
@@ -109,7 +214,7 @@ $boxShadow: #b9d5d999;
         flex-direction: column;
         align-items: center;
         &__text {
-            font-size: 14px;
+            font-size: 0.77rem;
             line-height: 20px;
             text-align: center;
             color: $secondary;
@@ -136,9 +241,12 @@ $boxShadow: #b9d5d999;
     }
 }
 
-.bg-image {
+.illustration {
     display: block;
     margin: auto;
+    background: url(../../assets/images/Illustrations-1.png) no-repeat center;
+    max-width: 1920px;
+    height: 550px;
 }
 
 .pets {
@@ -151,7 +259,7 @@ $boxShadow: #b9d5d999;
     align-items: center;
     &-title {
         font-family: Rubik;
-        font-size: 24px;
+        font-size: 1.33rem;
         line-height: 28px;
         text-transform: uppercase;
         color: $secondary;
@@ -163,7 +271,7 @@ $boxShadow: #b9d5d999;
         box-sizing: border-box;
         border-radius: 100px;
         font-family: Roboto Mono;
-        font-size: 18px;
+        font-size: 1rem;
         line-height: 24px;
         width: 331px;
         height: 52px;
@@ -198,7 +306,7 @@ $boxShadow: #b9d5d999;
         grid-template-rows: repeat(2, 1fr);
         grid-template-columns: repeat(3, 1fr);
         &__card {
-            width: 480px;
+            max-width: 480px;
             box-shadow: 0px 2px 30px #0000000f;
             &-top {
                 height: 273px;
@@ -228,11 +336,11 @@ $boxShadow: #b9d5d999;
                 color: #2d2d2d;
                 font-family: Roboto;
                 font-weight: 500;
-                font-size: 24px;
+                font-size: 1.33rem;
                 line-height: 28px;
             }
             &-text {
-                font-size: 16px;
+                font-size: 0.88rem;
                 line-height: 19px;
                 color: #919191;
             }
@@ -260,7 +368,7 @@ $boxShadow: #b9d5d999;
         top: 102px;
         margin-left: 220px;
         font-family: Rubik;
-        font-size: 24px;
+        font-size: 1.33rem;
         line-height: 28px;
         text-transform: uppercase;
         color: $tertiary;
@@ -313,7 +421,7 @@ $boxShadow: #b9d5d999;
         }
         &__text {
             margin-top: 14px;
-            font-size: 14px;
+            font-size: 0.77rem;
             line-height: 20px;
             text-align: center;
             color: $tertiary;
@@ -335,7 +443,7 @@ $boxShadow: #b9d5d999;
     &-title {
         grid-row: 1 / 2;
         font-family: Rubik;
-        font-size: 24px;
+        font-size: 1.33rem;
         line-height: 28px;
         text-transform: uppercase;
         color: $secondary;
@@ -373,7 +481,7 @@ $boxShadow: #b9d5d999;
         }
     }
     &-container {
-        width: 480px;
+        max-width: 480px;
         grid-row: 2 / 3;
         display: flex;
         flex-direction: column;
@@ -386,7 +494,7 @@ $boxShadow: #b9d5d999;
         padding: 55px 56px 0 56px;
         border-radius: 10px;
         &__date {
-            font-size: 14px;
+            font-size: 0.77rem;
             line-height: 16px;
             color: #b3b3b3;
         }
@@ -395,7 +503,7 @@ $boxShadow: #b9d5d999;
             font-weight: 500;
             font-style: italic;
             font-weight: normal;
-            font-size: 16px;
+            font-size: 0.88rem;
             line-height: 19px;
             color: #2d2d2d;
         }
@@ -407,7 +515,7 @@ $boxShadow: #b9d5d999;
         &__name {
             margin-left: 16px;
             font-style: italic;
-            font-size: 16px;
+            font-size: 0.88rem;
             line-height: 19px;
             font-weight: 500;
             color: #000;
@@ -427,7 +535,7 @@ $boxShadow: #b9d5d999;
         left: 220px;
         top: 0;
         font-family: Rubik;
-        font-size: 24px;
+        font-size: 1.33rem;
         line-height: 28px;
         text-transform: uppercase;
         color: $secondary;
@@ -440,5 +548,30 @@ $boxShadow: #b9d5d999;
             opacity: 0.7;
             transform: rotate(360deg);
         }
+    }
+}
+
+.footer {
+    background: #196469;
+    height: 200px;
+    padding-left: 200px;
+    display: flex;
+    align-items: center;
+    position: relative;
+    &-container {
+        padding-left: 220px;
+        bottom: 56px;
+        right: 92px;
+        display: flex;
+        flex-direction: column;
+        position: absolute;
+    }
+    &-author {
+        font-size: 16px;
+        line-height: 19px;
+        letter-spacing: 1px;
+        text-align: right;
+        text-transform: uppercase;
+        color: #ffffff;
     }
 }

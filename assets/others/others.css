@@ -3,7 +3,6 @@
 @import url(https://fonts.googleapis.com/css?family=Rubik:300,regular,500,600,700,800,900,300italic,italic,500italic,600italic,700italic,800italic,900italic);
 * {
   margin: 0;
-  font-size: 18px;
   font-weight: normal;
   text-decoration: none;
   scroll-behavior: smooth;
@@ -68,142 +67,6 @@ body {
   margin-left: 5px;
 }
 
-.nav {
-  display: -ms-grid;
-  display: grid;
-  -ms-grid-columns: (auto)[5];
-      grid-template-columns: repeat(5, auto);
-  -webkit-column-gap: 52px;
-          column-gap: 52px;
-  margin-left: 53px;
-}
-
-.nav-link {
-  font-family: Roboto Mono;
-  font-weight: 500;
-  color: #c5e1e5;
-  text-transform: uppercase;
-  line-height: 40px;
-  -webkit-transition: all 0.3s ease;
-  transition: all 0.3s ease;
-}
-
-.nav-link:hover {
-  color: #0d444d;
-}
-
-.header {
-  background: #2a8086;
-  min-height: 110px;
-  display: -webkit-box;
-  display: -ms-flexbox;
-  display: flex;
-  padding: 0 90px 0 220px;
-  -webkit-box-align: center;
-      -ms-flex-align: center;
-          align-items: center;
-  position: relative;
-  z-index: 2;
-  -webkit-filter: drop-shadow(0px 1px 10px #12575b40);
-          filter: drop-shadow(0px 1px 10px #12575b40);
-}
-
-.header-container {
-  display: -webkit-box;
-  display: -ms-flexbox;
-  display: flex;
-  -webkit-box-orient: horizontal;
-  -webkit-box-direction: normal;
-      -ms-flex-direction: row;
-          flex-direction: row;
-  position: absolute;
-  right: 90px;
-  max-width: 500px;
-}
-
-.header-container__input {
-  background: #c5e1e5;
-  display: none;
-}
-
-.header-container__search {
-  width: 32px;
-  height: 32px;
-  background-image: url(../icons/search.svg);
-  -webkit-transition: all 0.3s ease;
-  transition: all 0.3s ease;
-}
-
-.header-container__search:hover {
-  -webkit-filter: drop-shadow(0 0 10px #c5e1e5);
-          filter: drop-shadow(0 0 10px #c5e1e5);
-  -webkit-transform: rotate(360deg);
-          transform: rotate(360deg);
-}
-
-.header-container__login {
-  text-transform: uppercase;
-  color: #c5e1e5;
-  margin: 0 18px 0 50px;
-  -webkit-transition: all 0.3s ease;
-  transition: all 0.3s ease;
-}
-
-.header-container__login:hover {
-  color: #0d444d;
-}
-
-.header-container__signup {
-  text-transform: uppercase;
-  color: #c5e1e5;
-  border: 1px solid #c5e1e6;
-  border-radius: 100px;
-  -webkit-transition: all 0.3s ease;
-  transition: all 0.3s ease;
-}
-
-.header-container__signup:hover {
-  background: #c5e1e5;
-  color: #0d444d;
-  -webkit-box-shadow: 0px 2px 50px #b9d5d999;
-          box-shadow: 0px 2px 50px #b9d5d999;
-}
-
-.footer {
-  padding-left: 220px;
-  background: #196469;
-  min-height: 200px;
-  display: -webkit-box;
-  display: -ms-flexbox;
-  display: flex;
-  -webkit-box-align: center;
-      -ms-flex-align: center;
-          align-items: center;
-  position: relative;
-}
-
-.footer-container {
-  display: -webkit-box;
-  display: -ms-flexbox;
-  display: flex;
-  -webkit-box-orient: vertical;
-  -webkit-box-direction: normal;
-      -ms-flex-direction: column;
-          flex-direction: column;
-  position: absolute;
-  right: 92px;
-  bottom: 57px;
-}
-
-.footer-author {
-  font-size: 16px;
-  line-height: 19px;
-  letter-spacing: 1px;
-  text-align: right;
-  text-transform: uppercase;
-  color: #ffffff;
-}
-
 .btn-close {
   background: url(../icons/closee.png) center no-repeat;
   width: 50px;
@@ -223,8 +86,6 @@ body {
 
 #contact {
   display: none;
-  -webkit-box-shadow: 0 0 500px #2d2d2d;
-          box-shadow: 0 0 500px #2d2d2d;
   padding: 45px 60px;
   position: fixed;
   top: 50%;
@@ -311,8 +172,6 @@ body {
 
 #feedback {
   display: none;
-  -webkit-box-shadow: 0 0 500px #2d2d2d;
-          box-shadow: 0 0 500px #2d2d2d;
   padding: 45px 60px;
   position: fixed;
   top: 50%;
@@ -428,8 +287,6 @@ body {
 
 #donate {
   display: none;
-  -webkit-box-shadow: 0 0 500px #2d2d2d;
-          box-shadow: 0 0 500px #2d2d2d;
   max-width: 568px;
   padding: 45px 60px;
   position: fixed;
@@ -649,8 +506,6 @@ body {
 
 .register {
   display: none;
-  -webkit-box-shadow: 0 0 500px #2d2d2d;
-          box-shadow: 0 0 500px #2d2d2d;
   max-width: 568px;
   position: fixed;
   top: 50%;
@@ -836,5 +691,19 @@ body {
 
 .login-btn {
   margin-top: 30px;
+}
+
+.substrate {
+  display: none;
+  z-index: 4;
+  width: 100%;
+  height: 100%;
+  background: #2d2d2d;
+  opacity: 0.5;
+  position: fixed;
+  top: 50%;
+  left: 50%;
+  -webkit-transform: translate(-50%, -50%);
+          transform: translate(-50%, -50%);
 }
 /*# sourceMappingURL=others.css.map */
