@@ -8,15 +8,17 @@ variables.menuOpen.addEventListener("click", function () {
     if (window.screen.availWidth < 600) {
         if (variables.menu.style.height !== "400px") {
             variables.menu.style.height = "400px";
-            variables.menu.style.zIndex = "4";
+            variables.menu.style.zIndex = "3";
+            variables.menu.style.marginTop = "0";
         } else {
+            variables.menu.style.marginTop = "-300px";
             variables.menu.style.height = "0";
             variables.menu.style.zIndex = "-2";
         }
     } else {
         if (variables.menu.style.height !== "100px") {
             variables.menu.style.height = "100px";
-            variables.menu.style.zIndex = "4";
+            variables.menu.style.zIndex = "3";
         } else {
             variables.menu.style.height = "0";
             variables.menu.style.zIndex = "-2";
@@ -227,9 +229,19 @@ if (variables.loginOpen !== null) {
 
 variables.substrate.addEventListener("click", function () {
     variables.substrate.style.display = "none";
-    variables.login.style.display = "none";
-    variables.signup.style.display = "none";
-    variables.donate.style.display = "none";
-    variables.feedback.style.display = "none";
-    variables.contact.style.display = "none";
+    if (variables.signupOpen !== null) {
+        variables.signup.style.display = "none";
+    }
+    if (variables.loginOpen !== null) {
+        variables.login.style.display = "none";
+    }
+    if (variables.donateOpen !== null) {
+        variables.donate.style.display = "none";
+    }
+    if (variables.feedbackOpen !== null) {
+        variables.feedback.style.display = "none";
+    }
+    if (variables.contactOpen !== null) {
+        variables.contact.style.display = "none";
+    }
 });

@@ -27,10 +27,6 @@ body {
   background-color: #f6f9fa;
 }
 
-#checkMaxWidth {
-  color: red;
-}
-
 .logo {
   width: 108px;
   height: 83px;
@@ -683,7 +679,7 @@ body {
 
 .register-agreement__text {
   font-size: 0.88rem;
-  line-height: 29px;
+  line-height: 16px;
   color: #2d2d2d;
 }
 
@@ -710,7 +706,7 @@ body {
   width: 100%;
   height: 100%;
   background: #2d2d2d;
-  opacity: 0.5;
+  opacity: 0.6;
   position: fixed;
   top: 50%;
   left: 50%;

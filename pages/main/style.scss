@@ -52,6 +52,7 @@ html {
     align-items: center;
     width: 1920px;
     padding: 0 220px;
+    z-index: 4;
     &-wrapper {
         z-index: 3;
         top: 0;
@@ -119,7 +120,7 @@ html {
     z-index: -2;
     display: flex;
     margin-top: -5px;
-    transition: 0.5s cubic-bezier(0, 0, 1, 1);
+    transition: 0.4s cubic-bezier(1, 1, 1, 1);
     position: fixed;
     width: 100%;
     background: $primary;
@@ -127,9 +128,6 @@ html {
     align-items: center;
     justify-content: center;
     column-gap: 30px;
-    &-wrapper {
-        display: none;
-    }
     &-link {
         color: $tertiary;
         font-family: Roboto Mono;

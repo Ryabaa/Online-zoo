@@ -54,6 +54,7 @@ html {
           align-items: center;
   width: 1920px;
   padding: 0 220px;
+  z-index: 4;
 }
 
 .header-wrapper {
@@ -152,8 +153,8 @@ html {
   display: -ms-flexbox;
   display: flex;
   margin-top: -5px;
-  -webkit-transition: 0.5s cubic-bezier(0, 0, 1, 1);
-  transition: 0.5s cubic-bezier(0, 0, 1, 1);
+  -webkit-transition: 0.4s cubic-bezier(1, 1, 1, 1);
+  transition: 0.4s cubic-bezier(1, 1, 1, 1);
   position: fixed;
   width: 100%;
   background: #2a8086;
@@ -169,10 +170,6 @@ html {
           justify-content: center;
   -webkit-column-gap: 30px;
           column-gap: 30px;
-}
-
-.menu-wrapper {
-  display: none;
 }
 
 .menu-link {

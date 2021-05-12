@@ -63,9 +63,6 @@
     }
 }
 @media (max-width: 600px) {
-    #checkMaxWidth {
-        color: blue;
-    }
     .send-btn {
         width: 260px;
         height: 40px;
@@ -76,7 +73,6 @@
     }
     #signup-close,
     #login-close {
-        top: 35px;
         right: 40px;
     }
     #contact {
@@ -213,7 +209,7 @@
     }
     .register {
         &-togglers__btn {
-            height: unset;
+            height: 50px;
         }
         &-main {
             padding: 20px 35px;
