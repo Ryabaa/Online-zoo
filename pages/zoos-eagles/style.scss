@@ -4,17 +4,138 @@ $tertiary: #c5e1e5;
 $hero-color: #f3f7f8;
 $btn-color: #0d444d;
 $boxShadow: #b9d5d999;
+$borderBottom: #12575b40;
 
 @import url(https://fonts.googleapis.com/css?family=Roboto:100,100italic,300,300italic,regular,italic,500,500italic,700,700italic,900,900italic);
 @import url(https://fonts.googleapis.com/css?family=Roboto+Mono:100,200,300,regular,500,600,700,100italic,200italic,300italic,italic,500italic,600italic,700italic);
 @import url(https://fonts.googleapis.com/css?family=Rubik:300,regular,500,600,700,800,900,300italic,italic,500italic,600italic,700italic,800italic,900italic);
 
-@mixin tr {
+@mixin slowTrans {
     transition: all 0.3s ease;
 }
 
-.nav-link:nth-child(3) {
-    border-bottom: 2px solid;
+html {
+    font-size: 18px;
+}
+
+.header-hero {
+    padding-top: 110px;
+    position: relative;
+}
+
+.nav {
+    display: grid;
+    grid-template-columns: repeat(5, auto);
+    column-gap: 52px;
+    margin-left: 53px;
+    &-link {
+        font-family: Roboto Mono;
+        font-weight: 500;
+        font-size: 1rem;
+        color: $tertiary;
+        text-transform: uppercase;
+        line-height: 40px;
+        @include slowTrans;
+        &:hover {
+            color: $secondary;
+        }
+        &:nth-child(3) {
+            border-bottom: 2px solid;
+        }
+    }
+}
+
+.header {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    width: 1920px;
+    padding: 0 220px;
+    &-wrapper {
+        z-index: 3;
+        top: 0;
+        width: 100%;
+        display: flex;
+        justify-content: center;
+        position: fixed;
+        background: $primary;
+        filter: drop-shadow(0px 1px 10px $borderBottom);
+        min-height: 110px;
+    }
+    &-container {
+        display: flex;
+        flex-direction: row;
+        max-width: 500px;
+        &__input {
+            background: $tertiary;
+            display: none;
+        }
+        &__search {
+            width: 32px;
+            height: 32px;
+            background-image: url(../../assets/icons/search.svg);
+            @include slowTrans;
+            &:hover {
+                filter: drop-shadow(0 0 10px $tertiary);
+                transform: rotate(360deg);
+            }
+        }
+        &__login {
+            text-transform: uppercase;
+            color: $tertiary;
+            margin: 0 18px 0 50px;
+            @include slowTrans;
+            &:hover {
+                color: $secondary;
+            }
+        }
+        &__signup {
+            text-transform: uppercase;
+            color: $tertiary;
+            border: 1px solid $tertiary;
+            border-radius: 100px;
+            @include slowTrans;
+            &:hover {
+                background: $tertiary;
+                color: $secondary;
+                box-shadow: 0px 2px 50px $boxShadow;
+            }
+        }
+        &__btn {
+            display: none;
+            background: url(../../assets/icons/menu.svg) center no-repeat;
+            width: 35px;
+            height: 35px;
+        }
+    }
+}
+
+.menu {
+    filter: drop-shadow(0px 1px 10px $borderBottom);
+    display: none;
+    margin-bottom: -2px;
+    z-index: 2;
+    position: fixed;
+    width: 100%;
+    background: $primary;
+    height: 100px;
+    flex-direction: row;
+    align-items: center;
+    justify-content: center;
+    column-gap: 30px;
+    &-link {
+        color: $tertiary;
+        font-family: Roboto Mono;
+        font-weight: 500;
+        font-size: 1rem;
+        color: $tertiary;
+        text-transform: uppercase;
+        line-height: 40px;
+        @include slowTrans;
+        &:hover {
+            color: $secondary;
+        }
+    }
 }
 
 .aside {
@@ -30,7 +151,7 @@ $boxShadow: #b9d5d999;
         &__img {
             z-index: 1;
             width: 76px;
-            @include tr;
+            @include slowTrans;
             &:hover {
                 opacity: 0.6;
             }
@@ -215,10 +336,39 @@ $boxShadow: #b9d5d999;
         color: $btn-color;
         border: 1px solid $tertiary;
         filter: drop-shadow(0px 2px 20px $boxShadow);
-        @include tr;
+        @include slowTrans;
         &:hover {
             background: #fff;
             filter: drop-shadow(0px 2px 80px $boxShadow);
         }
+    }
+}
+
+.footer {
+    display: flex;
+    align-items: center;
+    width: 1920px;
+    padding: 0 220px;
+    &-wrapper {
+        background: #196469;
+        height: 200px;
+        width: 100%;
+        display: flex;
+        justify-content: center;
+        background: $primary;
+    }
+    &-container {
+        padding-left: 220px;
+        display: flex;
+        flex-direction: column;
+        margin-left: auto;
+    }
+    &-author {
+        font-size: 16px;
+        line-height: 19px;
+        letter-spacing: 1px;
+        text-align: right;
+        text-transform: uppercase;
+        color: #ffffff;
     }
 }

@@ -69,23 +69,21 @@ body {
 
 .btn-close {
   background: url(../icons/closee.png) center no-repeat;
-  width: 50px;
-  height: 50px;
+  width: 25px;
+  height: 25px;
   position: absolute;
   border-radius: 200px;
-  right: 3px;
-  top: 3px;
-  -webkit-transition: all 0.2s ease;
-  transition: all 0.2s ease;
+  right: 60px;
+  top: 45px;
 }
 
 .btn-close:hover {
-  background: #ff000059 url(../icons/closee.png) center no-repeat;
-  border: 1px solid #ff0000a8;
+  opacity: 0.6;
 }
 
 #contact {
   display: none;
+  overflow: auto;
   padding: 45px 60px;
   position: fixed;
   top: 50%;
@@ -109,7 +107,7 @@ body {
 
 #contact-title {
   font-family: Rubik;
-  font-size: 24px;
+  font-size: 1.33rem;
   line-height: 28px;
   text-transform: uppercase;
   color: #0d444d;
@@ -142,7 +140,7 @@ body {
 }
 
 #contact-card__subtitle {
-  font-size: 14px;
+  font-size: 0.77rem;
   line-height: 16px;
   text-transform: uppercase;
   color: #0d444d;
@@ -172,6 +170,7 @@ body {
 
 #feedback {
   display: none;
+  overflow: auto;
   padding: 45px 60px;
   position: fixed;
   top: 50%;
@@ -195,7 +194,7 @@ body {
 
 #feedback-title {
   font-family: Rubik;
-  font-size: 24px;
+  font-size: 1.33rem;
   line-height: 28px;
   text-transform: uppercase;
   color: #0d444d;
@@ -228,7 +227,7 @@ body {
 }
 
 #feedback-card__subtitle {
-  font-size: 14px;
+  font-size: 0.77rem;
   line-height: 16px;
   text-transform: uppercase;
   color: #0d444d;
@@ -272,7 +271,7 @@ body {
   color: #fafafa;
   text-transform: uppercase;
   letter-spacing: 0.1em;
-  font-size: 18px;
+  font-size: 1rem;
   line-height: 24px;
   font-family: Roboto Mono;
   -webkit-transition: all 0.3s ease;
@@ -287,6 +286,7 @@ body {
 
 #donate {
   display: none;
+  overflow: auto;
   max-width: 568px;
   padding: 45px 60px;
   position: fixed;
@@ -311,7 +311,7 @@ body {
 
 #donate-title {
   font-family: Rubik;
-  font-size: 24px;
+  font-size: 1.33rem;
   line-height: 28px;
   text-transform: uppercase;
   color: #0d444d;
@@ -322,7 +322,7 @@ body {
 
 #donate-text {
   font-style: italic;
-  font-size: 16px;
+  font-size: 0.88rem;
   line-height: 19px;
   color: #2d2d2d;
   margin-top: 32px;
@@ -353,7 +353,7 @@ body {
   height: 54px;
   -webkit-box-shadow: 0px 2px 30px #0000000f;
           box-shadow: 0px 2px 30px #0000000f;
-  font-size: 16px;
+  font-size: 0.88rem;
   line-height: 19px;
   text-align: center;
   border: 1px solid #19707d;
@@ -384,7 +384,7 @@ body {
           box-shadow: 0px 2px 30px #0000000f;
   border-radius: 10px;
   height: 54px;
-  font-size: 16px;
+  font-size: 0.88rem;
   line-height: 19px;
   text-align: center;
   color: #19707d;
@@ -416,7 +416,7 @@ body {
 
 #donate-card__subtitle {
   margin-bottom: 8px;
-  font-size: 14px;
+  font-size: 0.77rem;
   line-height: 16px;
   text-transform: uppercase;
   color: #0d444d;
@@ -499,20 +499,26 @@ body {
 
 #donate-ps__text {
   font-weight: 300;
-  font-size: 14px;
+  font-size: 0.77rem;
   line-height: 16px;
   color: #2d2d2d;
+}
+
+#login-close,
+#signup-close {
+  background: url(../icons/close-white.png) center no-repeat;
+  top: 32px;
 }
 
 .register {
   display: none;
   max-width: 568px;
   position: fixed;
+  overflow: auto;
   top: 50%;
   left: 50%;
   -webkit-transform: translate(-50%, -50%);
           transform: translate(-50%, -50%);
-  background: #fafafa;
   -webkit-box-orient: vertical;
   -webkit-box-direction: normal;
       -ms-flex-direction: column;
@@ -525,10 +531,10 @@ body {
           align-items: center;
   border-radius: 20px;
   z-index: 5;
+  background-color: #2a8086;
 }
 
 .register-header {
-  background-color: #2a8086;
   border-radius: 20px 20px 0 0;
   display: -webkit-box;
   display: -ms-flexbox;
@@ -544,6 +550,7 @@ body {
 }
 
 .register-main {
+  background: #fafafa;
   padding: 32px 60px 46px 60px;
 }
 
@@ -566,7 +573,7 @@ body {
   -webkit-box-align: start;
       -ms-flex-align: start;
           align-items: flex-start;
-  font-size: 18px;
+  font-size: 1rem;
   line-height: 21px;
   text-transform: uppercase;
   color: #0d444d;
@@ -607,7 +614,7 @@ body {
   -webkit-box-align: center;
       -ms-flex-align: center;
           align-items: center;
-  font-size: 16px;
+  font-size: 0.88rem;
   line-height: 19px;
   color: #2d2d2d;
 }
@@ -635,7 +642,7 @@ body {
 
 .register-card__subtitle {
   margin-bottom: 8px;
-  font-size: 14px;
+  font-size: 0.77rem;
   line-height: 16px;
   text-transform: uppercase;
   color: #0d444d;
@@ -671,7 +678,7 @@ body {
 }
 
 .register-agreement__text {
-  font-size: 16px;
+  font-size: 0.88rem;
   line-height: 29px;
   color: #2d2d2d;
 }

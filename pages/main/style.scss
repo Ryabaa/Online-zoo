@@ -4,12 +4,13 @@ $tertiary: #c5e1e5;
 $hero-color: #f3f7f8;
 $btn-color: #0d444d;
 $boxShadow: #b9d5d999;
+$borderBottom: #12575b40;
 
 @import url(https://fonts.googleapis.com/css?family=Roboto:100,100italic,300,300italic,regular,italic,500,500italic,700,700italic,900,900italic);
 @import url(https://fonts.googleapis.com/css?family=Roboto+Mono:100,200,300,regular,500,600,700,100italic,200italic,300italic,italic,500italic,600italic,700italic);
 @import url(https://fonts.googleapis.com/css?family=Rubik:300,regular,500,600,700,800,900,300italic,italic,500italic,600italic,700italic,800italic,900italic);
 
-@mixin tr {
+@mixin slowTrans {
     transition: all 0.3s ease;
 }
 
@@ -18,13 +19,14 @@ html {
 }
 
 .header-hero {
+    padding-top: 110px;
     position: relative;
 }
 
 .nav {
     display: grid;
     grid-template-columns: repeat(5, auto);
-    column-gap: 52px;
+    column-gap: 50px;
     margin-left: 53px;
     &-link {
         font-family: Roboto Mono;
@@ -33,7 +35,9 @@ html {
         color: $tertiary;
         text-transform: uppercase;
         line-height: 40px;
-        @include tr;
+        @include slowTrans;
+        display: flex;
+        justify-content: center;
         &:hover {
             color: $secondary;
         }
@@ -44,22 +48,26 @@ html {
 }
 
 .header {
-    padding: 0 90px 0 220px;
-    background: $primary;
-    min-height: 110px;
     display: flex;
     align-items: center;
-    position: relative;
-    margin-bottom: -2px;
-    z-index: 3;
-    filter: drop-shadow(0px 1px 10px #12575b40);
-
+    width: 1920px;
+    padding: 0 220px;
+    &-wrapper {
+        z-index: 3;
+        top: 0;
+        width: 100%;
+        display: flex;
+        justify-content: center;
+        position: fixed;
+        background: $primary;
+        filter: drop-shadow(0px 1px 10px $borderBottom);
+        min-height: 110px;
+    }
     &-container {
         display: flex;
         flex-direction: row;
-        position: absolute;
-        right: 90px;
-        max-width: 500px;
+        margin-left: auto;
+        align-items: center;
         &__input {
             background: $tertiary;
             display: none;
@@ -68,7 +76,7 @@ html {
             width: 32px;
             height: 32px;
             background-image: url(../../assets/icons/search.svg);
-            @include tr;
+            @include slowTrans;
             &:hover {
                 filter: drop-shadow(0 0 10px $tertiary);
                 transform: rotate(360deg);
@@ -78,17 +86,18 @@ html {
             text-transform: uppercase;
             color: $tertiary;
             margin: 0 18px 0 50px;
-            @include tr;
+            @include slowTrans;
             &:hover {
                 color: $secondary;
             }
         }
         &__signup {
+            padding: 5px 8px;
             text-transform: uppercase;
             color: $tertiary;
             border: 1px solid $tertiary;
             border-radius: 100px;
-            @include tr;
+            @include slowTrans;
             &:hover {
                 background: $tertiary;
                 color: $secondary;
@@ -96,6 +105,7 @@ html {
             }
         }
         &__btn {
+            display: none;
             background: url(../../assets/icons/menu.svg) center no-repeat;
             width: 35px;
             height: 35px;
@@ -104,10 +114,12 @@ html {
 }
 
 .menu {
-    filter: drop-shadow(0px 1px 10px #12575b40);
+    filter: drop-shadow(0px 1px 10px $borderBottom);
     display: none;
     margin-bottom: -2px;
     z-index: 2;
+    position: fixed;
+    width: 100%;
     background: $primary;
     height: 100px;
     flex-direction: row;
@@ -122,7 +134,7 @@ html {
         color: $tertiary;
         text-transform: uppercase;
         line-height: 40px;
-        @include tr;
+        @include slowTrans;
         &:hover {
             color: $secondary;
         }
@@ -133,20 +145,21 @@ html {
     min-height: 795px;
     max-width: 1920px;
     background: url(../../assets/images/hero-bg.png) center no-repeat;
-    padding: 0 220px;
+    padding: 0px 220px;
     display: flex;
     flex-direction: row;
     margin: auto;
     justify-content: space-between;
     &-container {
         max-width: 700px;
-        padding-top: 103px;
+        padding-top: 85px;
     }
     &-title {
         font-family: Rubik;
         color: $hero-color;
         font-size: 4rem;
         font-weight: 300;
+        line-height: 80px;
         &__span {
             font-family: Rubik;
             font-weight: 500;
@@ -156,6 +169,7 @@ html {
     &-text {
         max-width: 480px;
         margin: 27px 0 87px 0;
+        line-height: 30px;
         color: $hero-color;
     }
     &-link {
@@ -171,7 +185,7 @@ html {
         font-family: Roboto Mono;
         text-transform: uppercase;
         color: $btn-color;
-        @include tr;
+        @include slowTrans;
         &:hover {
             background: $primary;
             color: #fff;
@@ -179,12 +193,13 @@ html {
     }
     &-image {
         position: relative;
+        margin-top: 20px;
         &__link {
             position: absolute;
             transform: translate(-50%, -50%);
             left: 50%;
             top: 50%;
-            @include tr;
+            @include slowTrans;
             &:hover {
                 opacity: 0.5;
             }
@@ -231,7 +246,7 @@ html {
         display: flex;
         justify-content: center;
         align-items: center;
-        @include tr;
+        @include slowTrans;
         &:hover {
             transform: rotate(360deg);
         }
@@ -277,7 +292,7 @@ html {
         height: 52px;
         letter-spacing: 0.1em;
         text-transform: uppercase;
-        @include tr;
+        @include slowTrans;
         color: #19707d;
         display: flex;
         justify-content: center;
@@ -316,7 +331,7 @@ html {
                 justify-content: center;
                 align-items: center;
                 border-bottom: 1px solid #e5eaeb;
-                @include tr;
+                @include slowTrans;
             }
             &-link:hover {
                 opacity: 0.7;
@@ -389,7 +404,7 @@ html {
         color: $btn-color;
         border: 1px solid $tertiary;
         filter: drop-shadow(0px 2px 20px $boxShadow);
-        @include tr;
+        @include slowTrans;
         &:hover {
             background: #fff;
             filter: drop-shadow(0px 2px 80px $boxShadow);
@@ -405,7 +420,7 @@ html {
             background: #fff;
             box-shadow: 0px 2px 50px $boxShadow;
             border-radius: 100px;
-            @include tr;
+            @include slowTrans;
             &-1 {
                 background: url(../../assets/icons/money.svg) no-repeat center #fff;
             }
@@ -438,6 +453,7 @@ html {
     grid-template-rows: repeat(2, auto);
     grid-template-columns: repeat(3, auto);
     row-gap: 64px;
+    column-gap: 30px;
     max-width: 1920px;
     margin: auto;
     &-title {
@@ -466,7 +482,7 @@ html {
         border: 1.5px solid #19707d;
         justify-self: end;
         justify-content: center;
-        @include tr;
+        @include slowTrans;
         &:hover {
             background: #19707d;
             color: #fff;
@@ -488,7 +504,7 @@ html {
         border-radius: 10px;
     }
     &-tcard {
-        background: url(../../assets/images/white-rect.png);
+        background: url(../../assets/images/white-rect.png) center no-repeat;
         width: 100%;
         height: 220px;
         padding: 55px 56px 0 56px;
@@ -543,7 +559,7 @@ html {
     &-img {
         width: 76px;
         height: 73px;
-        @include tr;
+        @include slowTrans;
         &:hover {
             opacity: 0.7;
             transform: rotate(360deg);
@@ -552,19 +568,31 @@ html {
 }
 
 .footer {
-    background: #196469;
-    height: 200px;
-    padding-left: 200px;
     display: flex;
     align-items: center;
-    position: relative;
-    &-container {
-        padding-left: 220px;
-        bottom: 56px;
-        right: 92px;
+    width: 1920px;
+    padding: 0 220px;
+    grid-template-columns: 100px 1fr;
+    grid-template-rows: repeat(2, auto);
+    &-wrapper {
+        background: #196469;
+        height: 200px;
+        width: 100%;
         display: flex;
+        justify-content: center;
+        background: $primary;
+    }
+    &-nav {
+        grid-column: 2 / 3;
+        grid-row: 1 / 2;
+        max-width: 520px;
+    }
+    &-container {
+        display: flex;
+        grid-column: 2 / 3;
+        grid-row: 1 / 2;
         flex-direction: column;
-        position: absolute;
+        margin-left: auto;
     }
     &-author {
         font-size: 16px;

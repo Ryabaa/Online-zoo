@@ -1,0 +1,218 @@
+@media (max-height: 900px) {
+  html {
+    font-size: 14px;
+  }
+  .btn-close {
+    right: 40px;
+    top: 35px;
+  }
+  #signup-close,
+  #login-close {
+    top: 15px;
+    right: 40px;
+  }
+  #donate {
+    max-height: 580px;
+    padding: 35px 40px;
+  }
+  #contact {
+    padding: 30px 40px;
+  }
+  #contact-card__input {
+    height: 40px;
+  }
+  #contact-card__input-big {
+    height: 100px;
+  }
+  #feedback {
+    padding: 30px 40px;
+  }
+  #feedback-card__input {
+    height: 40px;
+  }
+  #feedback-card__input-big {
+    height: 100px;
+  }
+  .register-header {
+    height: 90px;
+  }
+  .register-main {
+    padding: 20px 40px;
+  }
+  .register-container {
+    row-gap: 10px;
+  }
+  .register-card__subtitle {
+    margin-bottom: 2px;
+  }
+  .register-card__input {
+    height: 40px;
+  }
+  .register-loginThrough {
+    padding: 15px 0;
+  }
+  .register-agreement {
+    padding: 15px 0;
+  }
+  .send-btn {
+    height: 40px;
+  }
+}
+
+@media (max-width: 600px) {
+  .send-btn {
+    width: 260px;
+    height: 40px;
+  }
+  .btn-close {
+    right: 40px;
+    top: 35px;
+  }
+  #signup-close,
+  #login-close {
+    top: 35px;
+    right: 40px;
+  }
+  #contact {
+    padding: 35px 45px;
+  }
+  #contact-card__input {
+    width: 260px;
+    height: 40px;
+  }
+  #contact-card__input-big {
+    width: 260px;
+    height: 120px;
+  }
+  #feedback {
+    padding: 35px 45px;
+  }
+  #feedback-card__input {
+    width: 260px;
+    height: 40px;
+  }
+  #feedback-card__input-big {
+    width: 260px;
+    height: 120px;
+  }
+  #donate {
+    padding: 35px 45px;
+  }
+  #donate-payments {
+    max-width: 225px;
+  }
+  #donate-card__input {
+    width: 260px;
+    height: 40px;
+  }
+  #donate-card__pay {
+    width: 260px;
+    height: 70px;
+    -webkit-box-orient: vertical;
+    -webkit-box-direction: normal;
+        -ms-flex-direction: column;
+            flex-direction: column;
+    padding: 10px 10px;
+  }
+  #donate-card__pay-container-1 {
+    margin-right: auto;
+    margin-left: unset;
+  }
+  #donate-card__pay-container-2 {
+    margin-right: auto;
+    margin-top: auto;
+  }
+  .register-main {
+    padding: 20px 40px;
+  }
+  .register-loginThrough__btn {
+    -webkit-box-orient: vertical;
+    -webkit-box-direction: normal;
+        -ms-flex-direction: column;
+            flex-direction: column;
+    row-gap: 10px;
+    height: 70px;
+  }
+  .register-card__input {
+    width: 260px;
+    height: 40px;
+  }
+}
+
+@media (max-width: 360px) {
+  html {
+    font-size: 12px;
+  }
+  .send-btn {
+    width: 200px;
+  }
+  .btn-close {
+    right: 35px;
+    top: 25px;
+  }
+  #signup-close,
+  #login-close {
+    top: 25px;
+    right: 35px;
+  }
+  #donate {
+    padding: 25px 35px;
+  }
+  #donate-card__input {
+    width: 200px;
+    height: 40px;
+  }
+  #donate-card__pay {
+    width: 200px;
+    height: 70px;
+    -webkit-box-orient: vertical;
+    -webkit-box-direction: normal;
+        -ms-flex-direction: column;
+            flex-direction: column;
+    padding: 10px 10px;
+  }
+  #donate-card__pay-container-1 {
+    margin-right: auto;
+    margin-left: unset;
+  }
+  #donate-card__pay-input-1 {
+    width: 110px;
+  }
+  #donate-card__pay-container-2 {
+    margin-right: auto;
+    margin-top: auto;
+  }
+  #contact {
+    padding: 25px 35px;
+  }
+  #contact-card__input {
+    width: 200px;
+    height: 40px;
+  }
+  #contact-card__input-big {
+    width: 200px;
+    height: 80px;
+  }
+  #feedback {
+    padding: 25px 35px;
+  }
+  #feedback-card__input {
+    width: 200px;
+    height: 40px;
+  }
+  #feedback-card__input-big {
+    width: 200px;
+    height: 80px;
+  }
+  .register-togglers__btn {
+    height: unset;
+  }
+  .register-main {
+    padding: 20px 35px;
+  }
+  .register-card__input {
+    width: 200px;
+    height: 40px;
+  }
+}
+/*# sourceMappingURL=media.css.map */

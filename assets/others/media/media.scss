@@ -1,0 +1,223 @@
+@media (max-height: 900px) {
+    html {
+        font-size: 14px;
+    }
+    .btn-close {
+        right: 40px;
+        top: 35px;
+    }
+    #signup-close,
+    #login-close {
+        top: 15px;
+        right: 40px;
+    }
+    #donate {
+        max-height: 580px;
+        padding: 35px 40px;
+    }
+    #contact {
+        padding: 30px 40px;
+        &-card__input {
+            height: 40px;
+            &-big {
+                height: 100px;
+            }
+        }
+    }
+    #feedback {
+        padding: 30px 40px;
+        &-card__input {
+            height: 40px;
+            &-big {
+                height: 100px;
+            }
+        }
+    }
+    .register {
+        &-header {
+            height: 90px;
+        }
+        &-main {
+            padding: 20px 40px;
+        }
+        &-container {
+            row-gap: 10px;
+        }
+        &-card {
+            &__subtitle {
+                margin-bottom: 2px;
+            }
+            &__input {
+                height: 40px;
+            }
+        }
+        &-loginThrough {
+            padding: 15px 0;
+        }
+        &-agreement {
+            padding: 15px 0;
+        }
+    }
+    .send-btn {
+        height: 40px;
+    }
+}
+@media (max-width: 600px) {
+    .send-btn {
+        width: 260px;
+        height: 40px;
+    }
+    .btn-close {
+        right: 40px;
+        top: 35px;
+    }
+    #signup-close,
+    #login-close {
+        top: 35px;
+        right: 40px;
+    }
+    #contact {
+        padding: 35px 45px;
+        &-card__input {
+            width: 260px;
+            height: 40px;
+            &-big {
+                width: 260px;
+                height: 120px;
+            }
+        }
+    }
+    #feedback {
+        padding: 35px 45px;
+        &-card__input {
+            width: 260px;
+            height: 40px;
+            &-big {
+                width: 260px;
+                height: 120px;
+            }
+        }
+    }
+    #donate {
+        padding: 35px 45px;
+        &-payments {
+            max-width: 225px;
+        }
+        &-card {
+            &__input {
+                width: 260px;
+                height: 40px;
+            }
+            &__pay {
+                width: 260px;
+                height: 70px;
+                flex-direction: column;
+                padding: 10px 10px;
+                &-container-1 {
+                    margin-right: auto;
+                    margin-left: unset;
+                }
+                &-container-2 {
+                    margin-right: auto;
+                    margin-top: auto;
+                }
+            }
+        }
+    }
+    .register {
+        &-main {
+            padding: 20px 40px;
+        }
+        &-loginThrough__btn {
+            flex-direction: column;
+            row-gap: 10px;
+            height: 70px;
+        }
+        &-card__input {
+            width: 260px;
+            height: 40px;
+        }
+    }
+}
+
+@media (max-width: 360px) {
+    html {
+        font-size: 12px;
+    }
+    .send-btn {
+        width: 200px;
+    }
+    .btn-close {
+        right: 35px;
+        top: 25px;
+    }
+    #signup-close,
+    #login-close {
+        top: 25px;
+        right: 35px;
+    }
+    #donate {
+        padding: 25px 35px;
+        &-card {
+            &__input {
+                width: 200px;
+                height: 40px;
+            }
+            &__pay {
+                width: 200px;
+                height: 70px;
+                flex-direction: column;
+                padding: 10px 10px;
+                &-container-1 {
+                    margin-right: auto;
+                    margin-left: unset;
+                }
+                &-input-1 {
+                    width: 110px;
+                }
+                &-container-2 {
+                    margin-right: auto;
+                    margin-top: auto;
+                }
+            }
+        }
+    }
+    #contact {
+        padding: 25px 35px;
+        &-card {
+            &__input {
+                width: 200px;
+                height: 40px;
+                &-big {
+                    width: 200px;
+                    height: 80px;
+                }
+            }
+        }
+    }
+    #feedback {
+        padding: 25px 35px;
+        &-card {
+            &__input {
+                width: 200px;
+                height: 40px;
+                &-big {
+                    width: 200px;
+                    height: 80px;
+                }
+            }
+        }
+    }
+    .register {
+        &-togglers__btn {
+            height: unset;
+        }
+        &-main {
+            padding: 20px 35px;
+        }
+        &-card__input {
+            width: 200px;
+            height: 40px;
+        }
+    }
+}
