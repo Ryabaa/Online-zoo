@@ -5,10 +5,22 @@ variables.headerSearch.addEventListener("click", function () {
 });
 
 variables.menuOpen.addEventListener("click", function () {
-    if (variables.menu.style.display !== "flex") {
-        variables.menu.style.display = "flex";
+    if (window.screen.availWidth < 600) {
+        if (variables.menu.style.height !== "400px") {
+            variables.menu.style.height = "400px";
+            variables.menu.style.zIndex = "4";
+        } else {
+            variables.menu.style.height = "0";
+            variables.menu.style.zIndex = "-2";
+        }
     } else {
-        variables.menu.style.display = "none";
+        if (variables.menu.style.height !== "100px") {
+            variables.menu.style.height = "100px";
+            variables.menu.style.zIndex = "4";
+        } else {
+            variables.menu.style.height = "0";
+            variables.menu.style.zIndex = "-2";
+        }
     }
 });
 

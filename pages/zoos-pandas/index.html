@@ -23,8 +23,8 @@
                 </a>
                 <nav class="nav header-nav">
                     <a href="../../index.html" class="nav-link">About</a>
-                    <a href="./pages/map/index.html" class="nav-link">Map</a>
-                    <a href="./pages/zoos-pandas/index.html" class="nav-link">Zoos</a>
+                    <a href="../map/index.html" class="nav-link">Map</a>
+                    <a href="" class="nav-link">Zoos</a>
                     <button class="nav-link" id="contact-open__header">Contact us</button>
                     <a href="https://www.figma.com/file/vzrwoqf0kSG1uOify8BRBR/online-zoo?node-id=0%3A1" class="nav-link">Design</a>
                 </nav>
@@ -162,8 +162,8 @@
             </a>
             <nav class="nav">
                 <a href="../../index.html" class="nav-link">About</a>
-                <a href="" class="nav-link">Map</a>
-                <a href="../zoos-pandas/index.html" class="nav-link">Zoos</a>
+                <a href="../map/index.html" class="nav-link">Map</a>
+                <a href="" class="nav-link">Zoos</a>
                 <button class="nav-link" id="contact-open__footer">Contact us</button>
                 <a href="https://www.figma.com/file/vzrwoqf0kSG1uOify8BRBR/online-zoo?node-id=0%3A1" class="nav-link">Design</a>
             </nav>
@@ -256,6 +256,102 @@
             <p id="donate-ps__text">Your payment is protected</p>
         </div>
     </section>
+    <section id="signup" class="register">
+        <button id="signup-close" class="btn-close"></button>
+        <div class="register-header">
+            <div class="logo">
+                <p class="logo-title">online</p>
+                <div class="logo-container">
+                    <p class="logo-title">Z</p>
+                    <img src="../../assets/icons/logo.svg" class="logo-icon">
+                </div>
+            </div>
+        </div>
+        <div class="register-main">
+            <div class="register-togglers">
+                <button class="register-togglers__btn register-togglers__btn-dark">Create account</button>
+                <button id="right-toggler" class="register-togglers__btn register-togglers__btn-light">Log in</button>
+            </div>
+            <div class="register-loginThrough">
+                <button class="register-loginThrough__btn">
+                    <img src="../../assets/icons/google.svg" alt="">
+                    Google Sign in    
+                </button>
+                <button class="register-loginThrough__btn">
+                    <img src="../../assets/icons/facebook.svg" alt="">
+                    Facebook Sign in   
+                </button>
+            </div>
+            <div class="register-container">
+                <div class="register-card">
+                    <h2 class="register-card__subtitle">Name</h2>
+                    <p class="text-error" id="signupErrText-1">Write your name!</p>
+                    <input type="text" id="signup-input-1" class="register-card__input">
+                </div>
+                <div class="register-card">
+                    <h2 class="register-card__subtitle">Email</h2>
+                    <p class="text-error" id="signupErrText-2">Write your email!</p>
+                    <input type="text" id="signup-input-2" class="register-card__input">
+                </div>
+                <div class="register-card">
+                    <h2 class="register-card__subtitle">Password</h2>
+                    <p class="text-error" id="signupErrText-3">Password length must be more than 6 characters</p>
+                    <input type="text" id="signup-input-3" class="register-card__input">
+                </div>
+            </div>
+            <div class="register-agreement">
+                <input type="checkbox" class="register-agreement__checkbox" id="signup-checkbox">
+                <p class="register-agreement__text" id="signupErrUnderline">
+                    Agree with the <a href="" class="register-agreement__text-link">User Agreement</a> 
+                    and <a href="" class="register-agreement__text-link">Policy</a>
+                </p>
+            </div>
+            <button id="signup-send" class="send-btn">send</button>
+        </div>
+    </section>
+
+    <section id="login" class="register">
+        <button id="login-close" class="btn-close"></button>
+        <div class="register-header">
+            <div class="logo">
+                <p class="logo-title">online</p>
+                <div class="logo-container">
+                    <p class="logo-title">Z</p>
+                    <img src="../../assets/icons/logo.svg" class="logo-icon">
+                </div>
+            </div>
+        </div>
+        <div class="register-main">
+            <div class="register-togglers">
+                <button id="left-toggler" class="register-togglers__btn register-togglers__btn-light">Create account</button>
+                <button class="register-togglers__btn register-togglers__btn-dark">Log in</button>
+            </div>
+            <div class="register-loginThrough">
+                <button class="register-loginThrough__btn">
+                    <img src="../../assets/icons/google.svg" alt="">
+                    Google Sign in    
+                </button>
+                <button class="register-loginThrough__btn">
+                    <img src="../../assets/icons/facebook.svg" alt="">
+                    Facebook Sign in   
+                </button>
+            </div>
+            <div class="register-container">
+                <div class="register-card">
+                    <h2 class="register-card__subtitle">Email</h2>
+                    <p class="text-error" id="loginErrText-1">Write your email!</p>
+                    <input type="text" id="login-input-1" class="register-card__input">
+                </div>
+                <div class="register-card">
+                    <h2 class="register-card__subtitle">Password</h2>
+                    <p class="text-error" id="loginErrText-2">Write your Password!</p>
+                    <input type="text" id="login-input-2" class="register-card__input">
+                </div>
+            </div>
+            <button id="login-send" class="send-btn login-btn">send</button>
+        </div>
+    </section>
+    <section class="substrate"></section>
 
     <script type="module" src="../../script.js"></script>
 </body>

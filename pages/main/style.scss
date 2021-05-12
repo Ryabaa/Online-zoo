@@ -115,17 +115,21 @@ html {
 
 .menu {
     filter: drop-shadow(0px 1px 10px $borderBottom);
-    display: none;
-    margin-bottom: -2px;
-    z-index: 2;
+    height: 0;
+    z-index: -2;
+    display: flex;
+    margin-top: -5px;
+    transition: 0.5s cubic-bezier(0, 0, 1, 1);
     position: fixed;
     width: 100%;
     background: $primary;
-    height: 100px;
     flex-direction: row;
     align-items: center;
     justify-content: center;
     column-gap: 30px;
+    &-wrapper {
+        display: none;
+    }
     &-link {
         color: $tertiary;
         font-family: Roboto Mono;

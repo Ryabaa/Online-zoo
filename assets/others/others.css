@@ -27,6 +27,10 @@ body {
   background-color: #f6f9fa;
 }
 
+#checkMaxWidth {
+  color: red;
+}
+
 .logo {
   width: 108px;
   height: 83px;

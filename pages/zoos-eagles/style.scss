@@ -48,7 +48,6 @@ html {
 .header {
     display: flex;
     align-items: center;
-    justify-content: space-between;
     width: 1920px;
     padding: 0 220px;
     &-wrapper {
@@ -65,7 +64,8 @@ html {
     &-container {
         display: flex;
         flex-direction: row;
-        max-width: 500px;
+        margin-left: auto;
+        align-items: center;
         &__input {
             background: $tertiary;
             display: none;
@@ -90,6 +90,7 @@ html {
             }
         }
         &__signup {
+            padding: 5px 8px;
             text-transform: uppercase;
             color: $tertiary;
             border: 1px solid $tertiary;
@@ -112,17 +113,21 @@ html {
 
 .menu {
     filter: drop-shadow(0px 1px 10px $borderBottom);
-    display: none;
-    margin-bottom: -2px;
-    z-index: 2;
+    height: 0;
+    z-index: -2;
+    display: flex;
+    margin-top: -5px;
+    transition: 0.5s cubic-bezier(0, 0, 1, 1);
     position: fixed;
     width: 100%;
     background: $primary;
-    height: 100px;
     flex-direction: row;
     align-items: center;
     justify-content: center;
     column-gap: 30px;
+    &-wrapper {
+        display: none;
+    }
     &-link {
         color: $tertiary;
         font-family: Roboto Mono;

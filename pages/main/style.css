@@ -146,13 +146,17 @@ html {
 .menu {
   -webkit-filter: drop-shadow(0px 1px 10px #12575b40);
           filter: drop-shadow(0px 1px 10px #12575b40);
-  display: none;
-  margin-bottom: -2px;
-  z-index: 2;
+  height: 0;
+  z-index: -2;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  margin-top: -5px;
+  -webkit-transition: 0.5s cubic-bezier(0, 0, 1, 1);
+  transition: 0.5s cubic-bezier(0, 0, 1, 1);
   position: fixed;
   width: 100%;
   background: #2a8086;
-  height: 100px;
   -webkit-box-orient: horizontal;
   -webkit-box-direction: normal;
       -ms-flex-direction: row;
@@ -165,6 +169,10 @@ html {
           justify-content: center;
   -webkit-column-gap: 30px;
           column-gap: 30px;
+}
+
+.menu-wrapper {
+  display: none;
 }
 
 .menu-link {
