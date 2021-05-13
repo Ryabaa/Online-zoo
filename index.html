@@ -8,8 +8,10 @@
     <title>Online Zoo</title>
     <link rel="stylesheet" href="./pages/main/style.css">
     <link rel="stylesheet" href="./pages/main/media/media.css">
-    <link rel="stylesheet" href="./assets/others/others.css">
-    <link rel="stylesheet" href="./assets/others/media/media.css">
+    <link rel="stylesheet" href="./styles/global/global.css">
+    <link rel="stylesheet" href="./styles/global/media/media.css">
+    <link rel="stylesheet" href="./styles/modals/modals.css">
+    <link rel="stylesheet" href="./styles/modals/media/media.css">
 </head>
 
 <body id="body">
@@ -39,7 +41,7 @@
                 </div>
             </header>
         </section>
-        <section class="menu">
+        <section class="menu menu-hidden menu-visible">
             <a href="" class="menu-link">About</a>
             <a href="./pages/map/index.html" class="menu-link">Map</a>
             <a href="./pages/zoos/pandas.html" class="menu-link">Zoos</a>
@@ -47,7 +49,7 @@
             <a href="https://www.figma.com/file/vzrwoqf0kSG1uOify8BRBR/online-zoo?node-id=0%3A1" class="menu-link">Design</a>
             <button class="menu-link" id="login-open-2">my account</button>
         </section>
-        <section class="hero">
+        <section class="section hero">
             <div class="hero-container">
                 <h1 class="hero-title">Watch your favorite <span class="hero-title__span">animals online</span></h1>
                 <p class="hero-text">Observe different animals from around the world online in live time. Help vulunteers to take a good care of animals, donate to your favorite ones.</p>
@@ -59,11 +61,11 @@
                         <img src="./assets/icons/Frame.svg" alt="watch">
                     </a>
                 </div>
-                <h2 class="how">How it works</h2>
+                <h2 class="about-title">How it works</h2>
         </section>
     </section>
     <main class="main">
-        <section class="about">
+        <section class="section about">
             <div class="about-container">
                 <div class="about-card">
                     <img src="./assets/icons/binoculars.svg" alt="" class="about-card__img">
@@ -84,7 +86,7 @@
             </div>
         </section>
         <section class="illustration"></section>
-        <section class="pets">
+        <section class="section pets">
             <h2 class="pets-title">Pets in zoo</h2>
             <button class="pets-button">Choose your Favorite</button>
             <div class="pets-container">
@@ -150,7 +152,7 @@
                 </div>
             </div>
         </section>
-        <section class="pay">
+        <section class="section pay">
             <h2 class="pay-title">Pay and feed</h2>
             <button id="donate-open" class="pay-button">Donate to volunteers</button>
             <div class="pay-container pay-container-1">
@@ -168,7 +170,7 @@
                 <p class="pay-container__text">Animals are healthy and happy</p>
             </div>
         </section>
-        <section class="testimonials">
+        <section class="section testimonials">
             <h2 class="testimonials-title">Testimonials</h2>
             <button id="feedback-open" class="testimonials-button">Leave feedback</button>
             <div class="testimonials-container">
@@ -202,7 +204,7 @@
                 </div>
             </div>
         </section>
-        <section class="animals">
+        <section class="section animals">
             <h2 class="animals-title">Look at these beautiful animals</h2>
             <a href="./pages/zoos/pandas.html" class="animals-links"><img src="./assets/images/Pandas.png" class="animals-img" alt=""></a>
             <a href="./pages/zoos/gorillas.html" class="animals-links"><img src="./assets/images/gorrilas.png" class="animals-img" alt=""></a>
@@ -321,12 +323,12 @@
             <input type="text" class="donate-card__input-3" id="donate-card__input">
         </div>
         <div id="donate-card">
-            <img id="donate-card__icons" src="./assets/icons/Pay-methods.svg" alt="">
+            <img id="donate-card__icons" src="./assets/icons/modals/Pay-methods.svg" alt="">
             <p class="text-error" id="donate-card__text-4">Write your all card info!<br> (Number, MM, YY and CVC)</p>
             <p class="text-error" id="donate-card__text-5">The card number is written incorrectly.<br> Example: 8203 5432 7854 2519</p>
             <div id="donate-card__pay">
                 <div id="donate-card__pay-container-1">
-                    <img src="./assets/icons/card.svg" alt="">
+                    <img src="./assets/icons/modals/card.svg" alt="">
                     <input placeholder="Card Number" id="donate-card__pay-input-1" class="donate-card__pay-input-1">
                 </div>
                 <div id="donate-card__pay-container-2">
@@ -339,7 +341,7 @@
         </div>
         <button id="donate-send" class="send-btn">send</button>
         <div id="donate-ps">
-            <img src="./assets/icons/protect.svg" alt="">
+            <img src="./assets/icons/modals/protect.svg" alt="">
             <p id="donate-ps__text">Your payment is protected</p>
         </div>
     </section>
@@ -362,11 +364,11 @@
             </div>
             <div class="register-loginThrough">
                 <button class="register-loginThrough__btn">
-                    <img src="./assets/icons/google.svg" alt="">
+                    <img src="./assets/icons/modals/google.svg" alt="">
                     Google Sign in    
                 </button>
                 <button class="register-loginThrough__btn">
-                    <img src="./assets/icons/facebook.svg" alt="">
+                    <img src="./assets/icons/modals/facebook.svg" alt="">
                     Facebook Sign in   
                 </button>
             </div>
@@ -416,11 +418,11 @@
             </div>
             <div class="register-loginThrough">
                 <button class="register-loginThrough__btn">
-                    <img src="./assets/icons/google.svg" alt="">
+                    <img src="./assets/icons/modals/google.svg" alt="">
                     Google Sign in    
                 </button>
                 <button class="register-loginThrough__btn">
-                    <img src="./assets/icons/facebook.svg" alt="">
+                    <img src="./assets/icons/modals/facebook.svg" alt="">
                     Facebook Sign in   
                 </button>
             </div>
@@ -441,7 +443,7 @@
     </section>
     <section class="substrate"></section>
 
-    <script type="module" src="script.js"></script>
+    <script type="module" src="scripts/script.js"></script>
 </body>
 
 </html>
