@@ -83,7 +83,11 @@ html {
 
 .header-container__input {
   background: #c5e1e5;
-  display: none;
+  width: 0;
+  height: 30px;
+  visibility: hidden;
+  -webkit-transition: 0.2s cubic-bezier(0, 0, 1, 1);
+  transition: 0.2s cubic-bezier(0, 0, 1, 1);
 }
 
 .header-container__search {
@@ -97,8 +101,8 @@ html {
 .header-container__search:hover {
   -webkit-filter: drop-shadow(0 0 10px #c5e1e5);
           filter: drop-shadow(0 0 10px #c5e1e5);
-  -webkit-transform: rotate(360deg);
-          transform: rotate(360deg);
+  -webkit-transform: rotate(90deg);
+          transform: rotate(90deg);
 }
 
 .header-container__login {
@@ -238,7 +242,7 @@ html {
   font-family: Roboto Mono;
   margin-top: 2px;
   font-weight: 500;
-  font-size: 14px;
+  font-size: 0.77rem;
   line-height: 18px;
   text-align: center;
   text-transform: uppercase;
@@ -263,7 +267,7 @@ html {
 .maincam-title {
   font-family: Rubik;
   color: #0d444d;
-  font-size: 24px;
+  font-size: 1.33rem;
   line-height: 28px;
   text-transform: uppercase;
   -ms-grid-row: 1;
@@ -311,7 +315,7 @@ html {
 
 .maincam-subtitle {
   font-family: Rubik;
-  font-size: 18px;
+  font-size: 1rem;
   line-height: 21px;
   text-transform: capitalize;
   color: #0d444d;
@@ -331,7 +335,7 @@ html {
 
 .sidecam-subtitle {
   font-family: Rubik;
-  font-size: 18px;
+  font-size: 1rem;
   line-height: 21px;
   text-transform: capitalize;
   color: #0d444d;
@@ -402,7 +406,7 @@ html {
 
 .information-title {
   font-family: Rubik;
-  font-size: 24px;
+  font-size: 1.33rem;
   line-height: 28px;
   text-transform: uppercase;
   color: #0d444d;
@@ -415,7 +419,7 @@ html {
 }
 
 .info-card__subtitle {
-  font-size: 16px;
+  font-size: 0.88rem;
   line-height: 19px;
   color: #0d444d;
   font-weight: 500;
@@ -423,7 +427,7 @@ html {
 
 .info-card__text {
   max-width: 520px;
-  font-size: 14px;
+  font-size: 0.77rem;
   line-height: 20px;
   color: #0d444d;
 }
@@ -445,7 +449,7 @@ html {
 }
 
 .facts-text {
-  font-size: 14px;
+  font-size: 0.77rem;
   line-height: 20px;
   color: #0d444d;
 }
@@ -546,7 +550,7 @@ html {
 }
 
 .footer-author {
-  font-size: 16px;
+  font-size: 0.88rem;
   line-height: 19px;
   letter-spacing: 1px;
   text-align: right;

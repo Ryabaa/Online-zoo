@@ -1,7 +1,13 @@
 import variables from "./assets/others/variables.js";
 
 variables.headerSearch.addEventListener("click", function () {
-    variables.headerInput.style.display = "unset";
+    if (variables.headerInput.style.width !== "140px") {
+        variables.headerInput.style.width = "140px";
+        variables.headerInput.style.visibility = "visible";
+    } else {
+        variables.headerInput.style.width = "0px";
+        variables.headerInput.style.visibility = "hidden";
+    }
 });
 
 variables.menuOpen.addEventListener("click", function () {

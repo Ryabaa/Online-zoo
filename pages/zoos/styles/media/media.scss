@@ -1,6 +1,7 @@
 @media (max-width: 1700px) {
     .header,
-    .footer {
+    .footer,
+    .main-section {
         padding-left: 50px;
         padding-right: 50px;
     }
@@ -8,6 +9,12 @@
 @media (max-width: 1440px) {
     html {
         font-size: 15px;
+    }
+    .maincam-iframe {
+        height: 400px;
+    }
+    .sidecam-container__iframe-3 {
+        display: none;
     }
 }
 
@@ -27,6 +34,22 @@
             display: unset;
         }
     }
+    .main-section {
+        display: flex;
+        flex-direction: column;
+    }
+    .aside {
+        display: flex;
+        padding-bottom: 80px;
+        flex-direction: row;
+        justify-content: space-between;
+        max-width: 550px;
+        &-container {
+            &:not(:first-child) {
+                margin-top: 0;
+            }
+        }
+    }
     .footer {
         height: 150px;
         align-items: start;
@@ -39,6 +62,15 @@
 }
 
 @media (max-width: 860px) {
+    .maincam-iframe {
+        height: 300px;
+    }
+    .sidecam-container__iframe {
+        height: 170px;
+        &-2 {
+            display: none;
+        }
+    }
     .footer {
         height: 200px;
         align-items: center;
@@ -62,6 +94,29 @@
     .menu {
         flex-direction: column;
         height: 300px;
+        margin-top: -300px;
+    }
+    .maincam {
+        &-iframe {
+            height: 170px;
+        }
+        &-card__btn:first-child {
+            margin-right: 5px;
+        }
+    }
+    .sidecam-container__iframe {
+        max-width: 210px;
+        height: 110px;
+    }
+    .information {
+        display: flex;
+        flex-direction: column;
+    }
+    .facts {
+        margin-top: 100px;
+        &-container {
+            padding-left: 18px;
+        }
     }
     .footer {
         align-items: center;
@@ -91,5 +146,29 @@
             margin: unset;
             justify-self: center;
         }
+    }
+}
+
+@media (max-width: 500px) {
+    .aside {
+        flex-wrap: wrap;
+        row-gap: 20px;
+    }
+}
+
+@media (max-width: 400px) {
+    .maincam {
+        &-iframe {
+            height: 120px;
+        }
+        &-card {
+            padding: 20px 0;
+            grid-row: unset;
+            justify-self: start;
+        }
+    }
+    .sidecam-container__iframe {
+        max-width: 150px;
+        height: 90px;
     }
 }

@@ -1,6 +1,7 @@
 @media (max-width: 1700px) {
   .header,
-  .footer {
+  .footer,
+  .main-section {
     padding-left: 50px;
     padding-right: 50px;
   }
@@ -9,6 +10,12 @@
 @media (max-width: 1440px) {
   html {
     font-size: 15px;
+  }
+  .maincam-iframe {
+    height: 400px;
+  }
+  .sidecam-container__iframe-3 {
+    display: none;
   }
 }
 
@@ -21,6 +28,32 @@
   }
   .header-container__btn {
     display: unset;
+  }
+  .main-section {
+    display: -webkit-box;
+    display: -ms-flexbox;
+    display: flex;
+    -webkit-box-orient: vertical;
+    -webkit-box-direction: normal;
+        -ms-flex-direction: column;
+            flex-direction: column;
+  }
+  .aside {
+    display: -webkit-box;
+    display: -ms-flexbox;
+    display: flex;
+    padding-bottom: 80px;
+    -webkit-box-orient: horizontal;
+    -webkit-box-direction: normal;
+        -ms-flex-direction: row;
+            flex-direction: row;
+    -webkit-box-pack: justify;
+        -ms-flex-pack: justify;
+            justify-content: space-between;
+    max-width: 550px;
+  }
+  .aside-container:not(:first-child) {
+    margin-top: 0;
   }
   .footer {
     height: 150px;
@@ -41,6 +74,15 @@
 }
 
 @media (max-width: 860px) {
+  .maincam-iframe {
+    height: 300px;
+  }
+  .sidecam-container__iframe {
+    height: 170px;
+  }
+  .sidecam-container__iframe-2 {
+    display: none;
+  }
   .footer {
     height: 200px;
     -webkit-box-align: center;
@@ -75,6 +117,32 @@
         -ms-flex-direction: column;
             flex-direction: column;
     height: 300px;
+    margin-top: -300px;
+  }
+  .maincam-iframe {
+    height: 170px;
+  }
+  .maincam-card__btn:first-child {
+    margin-right: 5px;
+  }
+  .sidecam-container__iframe {
+    max-width: 210px;
+    height: 110px;
+  }
+  .information {
+    display: -webkit-box;
+    display: -ms-flexbox;
+    display: flex;
+    -webkit-box-orient: vertical;
+    -webkit-box-direction: normal;
+        -ms-flex-direction: column;
+            flex-direction: column;
+  }
+  .facts {
+    margin-top: 100px;
+  }
+  .facts-container {
+    padding-left: 18px;
   }
   .footer {
     -webkit-box-align: center;
@@ -131,6 +199,30 @@
     margin: unset;
     -ms-grid-column-align: center;
         justify-self: center;
+  }
+}
+
+@media (max-width: 500px) {
+  .aside {
+    -ms-flex-wrap: wrap;
+        flex-wrap: wrap;
+    row-gap: 20px;
+  }
+}
+
+@media (max-width: 400px) {
+  .maincam-iframe {
+    height: 120px;
+  }
+  .maincam-card {
+    padding: 20px 0;
+    grid-row: unset;
+    -ms-grid-column-align: start;
+        justify-self: start;
+  }
+  .sidecam-container__iframe {
+    max-width: 150px;
+    height: 90px;
   }
 }
 /*# sourceMappingURL=media.css.map */

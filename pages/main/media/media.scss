@@ -269,4 +269,26 @@
             justify-self: center;
         }
     }
+    .pets-button {
+        width: 270px;
+    }
+}
+
+@media (max-width: 340px) {
+    .hero {
+        &-title {
+            font-size: 3rem;
+            line-height: 50px;
+            &__span {
+                font-size: 3.5rem;
+            }
+        }
+        &-link {
+            width: 200px;
+        }
+    }
+    .pets {
+        padding-left: 0;
+        padding-right: 0;
+    }
 }

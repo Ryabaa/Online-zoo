@@ -333,5 +333,25 @@
     -ms-grid-column-align: center;
         justify-self: center;
   }
+  .pets-button {
+    width: 270px;
+  }
+}
+
+@media (max-width: 340px) {
+  .hero-title {
+    font-size: 3rem;
+    line-height: 50px;
+  }
+  .hero-title__span {
+    font-size: 3.5rem;
+  }
+  .hero-link {
+    width: 200px;
+  }
+  .pets {
+    padding-left: 0;
+    padding-right: 0;
+  }
 }
 /*# sourceMappingURL=media.css.map */
