@@ -1,4 +1,4 @@
-import variables from "./assets/others/variables.js";
+import variables from "./variables.js";
 
 variables.headerSearch.addEventListener("click", function () {
     if (variables.headerInput.style.width !== "140px") {
@@ -11,25 +11,7 @@ variables.headerSearch.addEventListener("click", function () {
 });
 
 variables.menuOpen.addEventListener("click", function () {
-    if (window.screen.availWidth < 600) {
-        if (variables.menu.style.height !== "400px") {
-            variables.menu.style.height = "400px";
-            variables.menu.style.zIndex = "3";
-            variables.menu.style.marginTop = "0";
-        } else {
-            variables.menu.style.marginTop = "-300px";
-            variables.menu.style.height = "0";
-            variables.menu.style.zIndex = "-2";
-        }
-    } else {
-        if (variables.menu.style.height !== "100px") {
-            variables.menu.style.height = "100px";
-            variables.menu.style.zIndex = "3";
-        } else {
-            variables.menu.style.height = "0";
-            variables.menu.style.zIndex = "-2";
-        }
-    }
+    console.log(1);
 });
 
 //-------------------------------------------Contact pop-up
