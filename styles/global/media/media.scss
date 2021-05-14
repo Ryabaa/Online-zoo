@@ -62,6 +62,10 @@
     .menu {
         flex-direction: column;
         height: 300px;
+        margin-top: -300px;
+        &-visible {
+            margin: 0;
+        }
     }
     .footer {
         align-items: center;

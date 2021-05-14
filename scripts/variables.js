@@ -3,7 +3,7 @@ export default {
     headerInput: document.querySelector(".header-container__input"),
     substrate: document.querySelector(".substrate"),
     menuOpen: document.getElementById("menu-open"),
-    menu: document.querySelector(".menu"),
+    menu: document.getElementById("menu"),
     //---------------------------------Contacts-------------------------
     contact: document.getElementById("contact"),
     contactOpenHeader: document.getElementById("contact-open__header"),

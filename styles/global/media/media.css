@@ -75,6 +75,10 @@
         -ms-flex-direction: column;
             flex-direction: column;
     height: 300px;
+    margin-top: -300px;
+  }
+  .menu-visible {
+    margin: 0;
   }
   .footer {
     -webkit-box-align: center;

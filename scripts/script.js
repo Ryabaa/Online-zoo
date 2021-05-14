@@ -11,7 +11,7 @@ variables.headerSearch.addEventListener("click", function () {
 });
 
 variables.menuOpen.addEventListener("click", function () {
-    console.log(1);
+    variables.menu.classList.toggle("menu-visible");
 });
 
 //-------------------------------------------Contact pop-up
