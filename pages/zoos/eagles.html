@@ -40,7 +40,7 @@
             </div>
         </header>
     </section>
-    <section class="menu">
+    <section id="menu" class="menu">
         <a href="../../index.html" class="menu-link">About</a>
         <a href="../map/index.html" class="menu-link">Map</a>
         <a href="" class="menu-link">Zoos</a>
@@ -211,19 +211,64 @@
         <div id="donate-container">
             <div id="donate-card">
                 <h2 id="donate-card__subtitle">Choose an animal</h2>
-                <p class="text-error" id="donate-card__text-1">Choose your animals! (Pandas, eagles, gorillas, alligators)</p>
-                <input type="text" class="donate-card__input-1" id="donate-card__input">
+                <p class="text-error" id="donate-card__text-1">Choose your animals!</p>
+                <div id="donate-card__animals">
+                    <div id="donate-card__animals-btn" class="donate-radio-btn">
+                        <input id="animals-radio-1" type="radio" name="animals" checked>
+                        <label for="animals-radio-1">Pandas</label>
+                    </div>
+                     
+                    <div id="donate-card__animals-btn" class="donate-radio-btn">
+                        <input id="animals-radio-2" type="radio" name="animals">
+                        <label for="animals-radio-2">Eagles</label>
+                    </div>
+                     
+                    <div id="donate-card__animals-btn" class="donate-radio-btn">
+                        <input id="animals-radio-3" type="radio" name="animals">
+                        <label for="animals-radio-3">Gorillas</label>
+                    </div>
+                     
+                    <div id="donate-card__animals-btn" class="donate-radio-btn">
+                        <input id="animals-radio-4" type="radio" name="animals">
+                        <label for="animals-radio-4">Alligators</label>
+                    </div>
+                </div>
             </div>
             <div id="donate-payments">
                 <h2 id="donate-card__subtitle">payments</h2>
-                <div id="donate-payments__card">
-                    <button id="donate-payments__card-btn">Monthly</button>
-                    <button id="donate-payments__card-btn">One-time</button>
-                </div>
-                <button id="donate-payments__btn">3$</button>
-                <button id="donate-payments__btn">5$</button>
-                <button id="donate-payments__btn">10$</button>
-                <button id="donate-payments__btn">$25</button>
+                    <div id="donate-payments__card">
+                        <div id="donate-payments__card-btn" class="donate-radio-btn">
+                            <input id="type-radio-1" type="radio" name="type" checked>
+                            <label for="type-radio-1">Monthly</label>
+                        </div>                     
+                        <div id="donate-payments__card-btn" class="donate-radio-btn">
+                            <input id="type-radio-2" type="radio" name="type">
+                            <label for="type-radio-2">One-time</label>
+                        </div>
+                    </div>
+                    <div id="donate-payments__money">
+                        <div id="donate-payments__money-btn" class="donate-radio-btn">
+                            <input id="money-radio-1" type="radio" name="money" checked>
+                            <label for="money-radio-1">3$</label>
+                        </div>
+                         
+                        <div id="donate-payments__money-btn" class="donate-radio-btn">
+                            <input id="money-radio-2" type="radio" name="money">
+                            <label for="money-radio-2">5$</label>
+                        </div>
+                         
+                        <div id="donate-payments__money-btn" class="donate-radio-btn">
+                            <input id="money-radio-3" type="radio" name="money">
+                            <label for="money-radio-3">10$</label>
+                        </div>
+                         
+                        <div id="donate-payments__money-btn" class="donate-radio-btn">
+                            <input id="money-radio-4" type="radio" name="money">
+                            <label for="money-radio-4">$25</label>
+                        </div>
+                    </div>
+            </div>
+        </div>
             </div>
         </div>
         <div id="donate-card">
@@ -237,17 +282,20 @@
             <input type="text" class="donate-card__input-3" id="donate-card__input">
         </div>
         <div id="donate-card">
-            <img id="donate-card__icons" src="../../assets/icons/Pay-methods.svg" alt="">
-            <p class="text-error" id="donate-card__text-4">Write your all card info!<br> (Number, MM, YY and CVC)</p>
+            <img id="donate-card__icons" src="../../assets/icons/modals/Pay-methods.svg" alt="">
+            <p class="text-error" id="donate-card__text-4">Write your all card info!<br> (MM, YY and CVC)</p>
             <p class="text-error" id="donate-card__text-5">The card number is written incorrectly.<br> Example: 8203 5432 7854 2519</p>
             <div id="donate-card__pay">
                 <div id="donate-card__pay-container-1">
-                    <img src="../../assets/icons/card.svg" alt="">
-                    <input placeholder="Card Number" id="donate-card__pay-input-1" class="donate-card__pay-input-1">
+                    <img src="../../assets/icons/modals/card.svg" alt="" id="donate-card__pay-icon">
+                    <input type="number" class="donate-card__pay-input_card-number-1" id="donate-card__pay-input_card-number">
+                    <input type="number" class="donate-card__pay-input_card-number-2" id="donate-card__pay-input_card-number">
+                    <input type="number" class="donate-card__pay-input_card-number-3" id="donate-card__pay-input_card-number">
+                    <input type="number" class="donate-card__pay-input_card-number-4" id="donate-card__pay-input_card-number">
                 </div>
                 <div id="donate-card__pay-container-2">
-                    <input placeholder="MM" type="number" id="donate-card__pay-input" class="donate-card__pay-input-2">
-                    /
+                    <input placeholder="MM" id="donate-card__pay-input" class="donate-card__pay-input-2">
+                    /  
                     <input placeholder="YY" type="number" id="donate-card__pay-input" class="donate-card__pay-input-3">
                     <input placeholder="CVC" type="number" id="donate-card__pay-input" class="donate-card__pay-input-4">
                 </div>
@@ -255,7 +303,7 @@
         </div>
         <button id="donate-send" class="send-btn">send</button>
         <div id="donate-ps">
-            <img src="../../assets/icons/protect.svg" alt="">
+            <img src="../../assets/icons/modals/protect.svg" alt="">
             <p id="donate-ps__text">Your payment is protected</p>
         </div>
     </section>

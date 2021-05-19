@@ -14,6 +14,15 @@ variables.menuOpen.addEventListener("click", function () {
     variables.menu.classList.toggle("menu-visible");
 });
 
+function closeGratitude() {
+    variables.gratitude.classList.remove("gratitude-visible");
+    variables.substrate.style.display = "none";
+}
+
+function locationReload() {
+    location.reload();
+}
+
 //-------------------------------------------Contact pop-up
 
 variables.contactOpenHeader.addEventListener("click", function () {
@@ -46,8 +55,21 @@ variables.contactSend.addEventListener("click", function () {
         variables.contactErrText_3.style.display = "unset";
     } else {
         variables.contact.style.display = "none";
-        variables.substrate.style.display = "none";
-        location.reload();
+        variables.gratitudeSpan.textContent =
+            "For contacting us, wait and we will answer your questions and suggestions";
+        variables.gratitude.classList.toggle("gratitude-visible");
+        setTimeout(locationReload, 6500);
+        setTimeout(closeGratitude, 6000);
+    }
+
+    if (variables.contactInput_1.value.length > 2) {
+        variables.contactErrText_1.style.display = "none";
+    }
+    if (variables.contactInput_2.value.length > 2) {
+        variables.contactErrText_2.style.display = "none";
+    }
+    if (variables.contactInput_3.value.length > 2) {
+        variables.contactErrText_3.style.display = "none";
     }
 });
 
@@ -73,8 +95,20 @@ if (variables.feedbackOpen !== null) {
             variables.feedbackErrText_3.style.display = "unset";
         } else {
             variables.feedback.style.display = "none";
-            variables.substrate.style.display = "none";
-            location.reload();
+            variables.gratitudeSpan.textContent = "for your feedback";
+            variables.gratitude.classList.toggle("gratitude-visible");
+            setTimeout(locationReload, 3500);
+            setTimeout(closeGratitude, 3000);
+        }
+
+        if (variables.feedbackInput_1.value.length > 2) {
+            variables.feedbackErrText_1.style.display = "none";
+        }
+        if (variables.feedbackInput_2.value.length > 2) {
+            variables.feedbackErrText_2.style.display = "none";
+        }
+        if (variables.feedbackInput_3.value.length > 2) {
+            variables.feedbackErrText_3.style.display = "none";
         }
     });
 }
@@ -92,56 +126,91 @@ if (variables.donateOpen !== null) {
     });
 
     variables.donateSend.addEventListener("click", function () {
-        let animals = ["pandas", "eagles", "gorillas", "alligators"];
-        function checkAnimalsType(type) {
-            type = type.toLowerCase();
-            let animalIndex = animals.indexOf(type);
-            if (animalIndex === -1) {
-                return "uncorrect";
-            }
-        }
-
-        function checkCardNumber(number) {
-            let length = true;
-            let elemLength = true;
-            let num = number.split(" ");
-            if (num.length !== 4) {
-                length = false;
-            }
-            for (let i = 0; i < num.length; i++) {
-                if (num[i].length !== 4) {
-                    elemLength = false;
-                }
-            }
-            if (length && elemLength) {
-                return "correct";
+        function checkCardNumber() {
+            if (
+                variables.donatePayCardNumber_1.value.length < 4 ||
+                variables.donatePayCardNumber_2.value.length < 4 ||
+                variables.donatePayCardNumber_3.value.length < 4 ||
+                variables.donatePayCardNumber_4.value.length < 4
+            ) {
+                return false;
             } else {
-                return "bruh!";
+                return true;
             }
         }
 
-        if (checkAnimalsType(variables.donateInput_1.value) === "uncorrect") {
-            variables.donateErrText_1.style.display = "unset";
-        } else if (variables.donateInput_2.value.length < 2) {
+        if (variables.donateInput_2.value.length < 2) {
             variables.donateErrText_2.style.display = "unset";
         } else if (variables.donateInput_3.value.length < 2) {
             variables.donateErrText_3.style.display = "unset";
+        } else if (checkCardNumber() === false) {
+            variables.donateErrText_5.style.display = "unset";
         } else if (
-            variables.donatePayInput_1.value.length < 2 ||
             variables.donatePayInput_2.value.length < 2 ||
             variables.donatePayInput_3.value.length < 2 ||
             variables.donatePayInput_4.value.length < 2
         ) {
             variables.donateErrText_4.style.display = "unset";
-        } else if (checkCardNumber(variables.donatePayInput_1.value) !== "correct") {
-            variables.donateErrText_5.style.display = "unset";
         } else {
             donate.style.display = "none";
-            variables.substrate.style.display = "none";
-            location.reload();
+            variables.gratitudeSpan.textContent = "for your payment";
+            variables.gratitude.classList.toggle("gratitude-visible");
+            setTimeout(locationReload, 3500);
+            setTimeout(closeGratitude, 3000);
+        }
+
+        if (variables.donateInput_2.value.length > 2) {
+            variables.donateErrText_2.style.display = "none";
+        }
+        if (variables.donateInput_3.value.length > 2) {
+            variables.donateErrText_3.style.display = "none";
+        }
+        if (
+            variables.donatePayCardNumber_1.value.length === 4 &&
+            variables.donatePayCardNumber_2.value.length === 4 &&
+            variables.donatePayCardNumber_3.value.length === 4 &&
+            variables.donatePayCardNumber_4.value.length === 4
+        ) {
+            variables.donateErrText_5.style.display = "none";
         }
     });
 }
+
+variables.donatePayCardNumber_1.oninput = function () {
+    if (this.value.length > 4) {
+        this.value = this.value.slice(0, 4);
+    }
+};
+variables.donatePayCardNumber_2.oninput = function () {
+    if (this.value.length > 4) {
+        this.value = this.value.slice(0, 4);
+    }
+};
+variables.donatePayCardNumber_3.oninput = function () {
+    if (this.value.length > 4) {
+        this.value = this.value.slice(0, 4);
+    }
+};
+variables.donatePayCardNumber_4.oninput = function () {
+    if (this.value.length > 4) {
+        this.value = this.value.slice(0, 4);
+    }
+};
+variables.donatePayInput_2.oninput = function () {
+    if (this.value.length > 2) {
+        this.value = this.value.slice(0, 2);
+    }
+};
+variables.donatePayInput_3.oninput = function () {
+    if (this.value.length > 2) {
+        this.value = this.value.slice(0, 2);
+    }
+};
+variables.donatePayInput_4.oninput = function () {
+    if (this.value.length > 3) {
+        this.value = this.value.slice(0, 3);
+    }
+};
 
 //----------------------SignUp Pop-up-------------------------
 if (variables.signupOpen !== null) {
@@ -168,8 +237,23 @@ if (variables.signupOpen !== null) {
             variables.signupErrUnderline.style.borderBottom = "red 3px dotted";
         } else {
             variables.signup.style.display = "none";
-            variables.substrate.style.display = "none";
-            location.reload();
+            variables.gratitudeSpan.textContent = "for sign up. Welocme!";
+            variables.gratitude.classList.toggle("gratitude-visible");
+            setTimeout(locationReload, 4500);
+            setTimeout(closeGratitude, 4000);
+        }
+
+        if (variables.signupInput_1.value.length > 2) {
+            variables.signupErrText_1.style.display = "none";
+        }
+        if (variables.signupInput_2.value.length > 2) {
+            variables.signupErrText_2.style.display = "none";
+        }
+        if (variables.signupInput_3.value.length > 6) {
+            variables.signupErrText_3.style.display = "none";
+        }
+        if (checkboxChecked !== false) {
+            variables.signupErrUnderline.style.borderBottom = "unset";
         }
     });
 
@@ -204,8 +288,17 @@ if (variables.loginOpen !== null) {
             variables.loginErrText_2.style.display = "unset";
         } else {
             variables.login.style.display = "none";
-            variables.substrate.style.display = "none";
-            location.reload();
+            variables.gratitudeText.textContent = "Welcome back!";
+            variables.gratitude.classList.toggle("gratitude-visible");
+            setTimeout(locationReload, 3000);
+            setTimeout(closeGratitude, 2500);
+        }
+
+        if (variables.loginInput_1.value.length > 2) {
+            variables.loginErrText_1.style.display = "none";
+        }
+        if (variables.loginInput_2.value.length > 2) {
+            variables.loginErrText_2.style.display = "none";
         }
     });
 
@@ -217,6 +310,7 @@ if (variables.loginOpen !== null) {
 
 variables.substrate.addEventListener("click", function () {
     variables.substrate.style.display = "none";
+    variables.gratitude.style.display = "none";
     if (variables.signupOpen !== null) {
         variables.signup.style.display = "none";
     }
